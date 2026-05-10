@@ -3148,6 +3148,12 @@ const CSS_TEMPLATE = `
   .pillar-text h3 { font-size: 1rem; }
   .pillar-text p { font-size: 0.85rem; line-height: 1.4; }
 }
+
+/* === PILLARS MOBILE FIX (v8.0c-mobile-fix-3) — stretch children to full width === */
+@media (max-width: 600px) {
+  .pillars-grid { align-items: stretch !important; }
+  .pillars-visual, .pillars-list { width: 100% !important; box-sizing: border-box; }
+}
 @media (prefers-reduced-motion: reduce) {
   .lux-scoreRingFlip { transition: none !important; }
   .lux-scoreRing--coin:hover .lux-scoreRingFlip { transform: none !important; }
@@ -3222,6 +3228,12 @@ const CSS_TEMPLATE = `
   .pillar.active { background: #fff; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08); }
   .pillar-text h3 { font-size: 1rem; }
   .pillar-text p { font-size: 0.85rem; line-height: 1.4; }
+}
+
+/* === PILLARS MOBILE FIX (v8.0c-mobile-fix-3) — stretch children to full width === */
+@media (max-width: 600px) {
+  .pillars-grid { align-items: stretch !important; }
+  .pillars-visual, .pillars-list { width: 100% !important; box-sizing: border-box; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
