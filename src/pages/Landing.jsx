@@ -206,7 +206,7 @@ const DEFAULT_CONTENT = {
   manifestoP2Connect: ', score',
   manifestoP3Phrase: 'every word',
   manifestoP3Connect: ', and track',
-  manifestoP4Phrase: 'every breakthrough',
+  manifestoP4Phrase: 'every win',
   manifestoP4Connect: 'over time.',
   heroPanelLabel: 'Last attempt · The Harvard List · 55',
   heroPanelHint: 'Hover the coin to see your CEFR level',
@@ -214,7 +214,7 @@ const DEFAULT_CONTENT = {
   micPrompt: 'Say this word out loud',
   micWord: 'world',
   micPhonetic: '/wɜːrld/',
-  pillarsTitle: 'The five moves behind every breakthrough',
+  pillarsTitle: 'The five moves behind every win',
   pillarsSubtitle: 'Every feature connects to one goal — getting your pronunciation heard, understood, taught, and remembered.',
   ctaTitle: 'Five tours. Pick where to start.',
   ctaSubtitle: 'Each tour walks you through one part of Lux in detail. Start anywhere — they all connect back.',
@@ -3094,6 +3094,32 @@ const CSS_TEMPLATE = `
 .lux-scoreRing--coin[data-cefr="C1"] { --lux-cefr-coin-bg: rgba(96, 165, 250, 0.22);  --lux-cefr-coin-text: #1d4ed8; }
 .lux-scoreRing--coin[data-cefr="C2"] { --lux-cefr-coin-bg: rgba(37, 99, 235, 0.22);   --lux-cefr-coin-text: #1d4ed8; }
 
+
+/* === MOBILE OVERRIDES (max 600px) — v8.0c-mobile-fix === */
+@media (max-width: 600px) {
+  html, body, #root, .lux-onboarding { overflow-x: hidden; max-width: 100vw; }
+  .container { padding: 0 1.1rem; }
+  .hero-headline-v7 { font-size: clamp(2.6rem, 11vw, 4.5rem); word-wrap: break-word; overflow-wrap: anywhere; }
+  .section-title { font-size: clamp(1.85rem, 8vw, 2.75rem) !important; word-wrap: break-word; overflow-wrap: anywhere; hyphens: auto; line-height: 1.1; }
+  .section-sub, .hero-sub, p { max-width: 100%; overflow-wrap: break-word; word-wrap: break-word; }
+  .convo-mock, .convo-visual, .convo-section { max-width: 100%; overflow: hidden; }
+  .lux-subnav .subnav-inner { justify-content: center; gap: 0.4rem; padding: 0.55rem 1rem; }
+  .cta-grid-five {
+    grid-template-columns: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1.1rem;
+    gap: 0.85rem;
+    padding: 0 1.1rem 1rem !important;
+    margin: 0 -1.1rem !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .cta-grid-five::-webkit-scrollbar { display: none; }
+  .cta-grid-five .cta-card { flex: 0 0 78%; scroll-snap-align: start; }
+}
 @media (prefers-reduced-motion: reduce) {
   .lux-scoreRingFlip { transition: none !important; }
   .lux-scoreRing--coin:hover .lux-scoreRingFlip { transform: none !important; }
@@ -3115,6 +3141,32 @@ const CSS_TEMPLATE = `
 @keyframes scrollX { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes pillarFill { from { height: 0; } to { height: 100%; } }
 
+
+/* === MOBILE OVERRIDES (max 600px) — v8.0c-mobile-fix === */
+@media (max-width: 600px) {
+  html, body, #root, .lux-onboarding { overflow-x: hidden; max-width: 100vw; }
+  .container { padding: 0 1.1rem; }
+  .hero-headline-v7 { font-size: clamp(2.6rem, 11vw, 4.5rem); word-wrap: break-word; overflow-wrap: anywhere; }
+  .section-title { font-size: clamp(1.85rem, 8vw, 2.75rem) !important; word-wrap: break-word; overflow-wrap: anywhere; hyphens: auto; line-height: 1.1; }
+  .section-sub, .hero-sub, p { max-width: 100%; overflow-wrap: break-word; word-wrap: break-word; }
+  .convo-mock, .convo-visual, .convo-section { max-width: 100%; overflow: hidden; }
+  .lux-subnav .subnav-inner { justify-content: center; gap: 0.4rem; padding: 0.55rem 1rem; }
+  .cta-grid-five {
+    grid-template-columns: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1.1rem;
+    gap: 0.85rem;
+    padding: 0 1.1rem 1rem !important;
+    margin: 0 -1.1rem !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .cta-grid-five::-webkit-scrollbar { display: none; }
+  .cta-grid-five .cta-card { flex: 0 0 78%; scroll-snap-align: start; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
