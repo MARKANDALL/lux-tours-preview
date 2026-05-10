@@ -164,10 +164,7 @@ export default function VoiceTour() {
       {/* NAV */}
       <nav className="lux-nav">
         <div className="nav-inner">
-          <div className="nav-brand">
-            <span className="nav-mark"><span className="nav-mark-inner" /></span>
-            <span className="nav-name">Lux</span>
-          </div>
+          <a href="/welcome" className="nav-brand" style={{ textDecoration: 'none', color: 'inherit' }}><span className="nav-mark"><span className="nav-mark-inner" /></span><span className="nav-name">Lux</span></a>
           <div className="nav-links">
             <a href="/welcome" className="nav-link">Welcome</a>
             <a href="#playback" className="nav-link">Self-playback</a>
