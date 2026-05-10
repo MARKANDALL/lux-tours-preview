@@ -3120,6 +3120,34 @@ const CSS_TEMPLATE = `
   .cta-grid-five::-webkit-scrollbar { display: none; }
   .cta-grid-five .cta-card { flex: 0 0 78%; scroll-snap-align: start; }
 }
+
+/* === PILLARS MOBILE — visual on top, horizontal scroll pillars (v8.0c-mobile-fix-2) === */
+@media (max-width: 600px) {
+  .pillars-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+  .pillars-visual { order: 1; min-height: 300px; padding: 1.5rem; }
+  .pillars-list {
+    order: 2;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.6rem;
+    padding: 0.4rem 1.1rem 0.85rem;
+    margin: 0 -1.1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pillars-list::-webkit-scrollbar { display: none; }
+  .pillar {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    background: var(--slate-50);
+    border-radius: 12px;
+    padding: 1rem 1rem 1rem 1.2rem;
+  }
+  .pillar.active { background: #fff; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08); }
+  .pillar-text h3 { font-size: 1rem; }
+  .pillar-text p { font-size: 0.85rem; line-height: 1.4; }
+}
 @media (prefers-reduced-motion: reduce) {
   .lux-scoreRingFlip { transition: none !important; }
   .lux-scoreRing--coin:hover .lux-scoreRingFlip { transform: none !important; }
@@ -3166,6 +3194,34 @@ const CSS_TEMPLATE = `
   }
   .cta-grid-five::-webkit-scrollbar { display: none; }
   .cta-grid-five .cta-card { flex: 0 0 78%; scroll-snap-align: start; }
+}
+
+/* === PILLARS MOBILE — visual on top, horizontal scroll pillars (v8.0c-mobile-fix-2) === */
+@media (max-width: 600px) {
+  .pillars-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+  .pillars-visual { order: 1; min-height: 300px; padding: 1.5rem; }
+  .pillars-list {
+    order: 2;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.6rem;
+    padding: 0.4rem 1.1rem 0.85rem;
+    margin: 0 -1.1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pillars-list::-webkit-scrollbar { display: none; }
+  .pillar {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    background: var(--slate-50);
+    border-radius: 12px;
+    padding: 1rem 1rem 1rem 1.2rem;
+  }
+  .pillar.active { background: #fff; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08); }
+  .pillar-text h3 { font-size: 1rem; }
+  .pillar-text p { font-size: 0.85rem; line-height: 1.4; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
