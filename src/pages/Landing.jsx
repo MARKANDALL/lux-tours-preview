@@ -52,30 +52,42 @@ const USE_CASES = [
   { id: 'phoneme',   icon: AudioLines,     title: 'Master /θ/, step by step' },
 ];
 
-// Behind Lux — 3-up trust/credibility section. PLACEHOLDER copy.
+// Behind Lux — 3-up trust/credibility section. Real content shipped 2026-05-10.
 const BEHIND_LUX = [
   {
     id: 'teacher',
     icon: UserCircle2,
-    eyebrow: '[PLACEHOLDER · About Mark]',
-    title: 'Built by a teacher, not a tech bro',
-    body: '[Placeholder — fill with Mark\'s real bio later. 13 years ESL teaching · MA Bilingual Education from Madrid · Savannah Tech Teacher of the Year. The credentials anchor here.]',
-    cta: 'Learn about Mark',
+    eyebrow: 'THE MAKER',
+    title: 'Built by a teacher AND a student — who\'s still climbing',
+    body: (
+      <>
+        Lux was built by an award-winning ESL teacher with 13+ years in the classroom. But more than that — by someone who learned Spanish as an adult, sat for the C1 exam at La Escuela Oficial de Idiomas, and at forty-one is <em>still</em> working on his own accent (built the app partly for himself). He knows what the climb feels like from the inside. The embarrassment. The patience it actually takes. The mornings you wake up knowing the outside world is one conversation away. He also knows it's <em>so</em> worth every step. Lux is for the people who <em>want</em> to keep climbing — and who deserve a guide that's honest about what it takes and honors that journey.
+      </>
+    ),
+    cta: 'Read more',
   },
   {
     id: 'science',
     icon: FlaskConical,
-    eyebrow: '[PLACEHOLDER · The science]',
-    title: 'How Lux scores every phoneme',
-    body: '[Placeholder — fill with the actual measurement methodology later. Azure Speech Services · phoneme-level analysis · CEFR mapping. The technical depth anchor here.]',
+    eyebrow: 'THE SCIENCE',
+    title: 'The science behind every score.',
+    body: (
+      <>
+        Lux uses Microsoft's Azure Speech Services to listen to every sound you make and score each one on its own — a real number for every phoneme in every word. On top of that, Lux adds its own scoring layer for rhythm, stress, and pace, because how you <em>say</em> a word matters as much as which sounds you hit. The math is built to be honest, not flattering. Every score has a reason. You can always see why.
+      </>
+    ),
     cta: 'See the methodology',
   },
   {
     id: 'voice',
     icon: Layers,
-    eyebrow: '[PLACEHOLDER · The voice clone]',
-    title: 'Why we let you hear yourself say it right',
-    body: '[Placeholder — fill with the voice cloning rationale later. Why ElevenLabs IVC was the right choice · what users do with their clones · the philosophy. The product-thinking anchor here.]',
+    eyebrow: 'THE VOICE CLONE',
+    title: 'Hear yourself, getting it right.',
+    body: (
+      <>
+        Lux can clone your voice. Then it speaks back to you — your voice, but with every sound landing exactly where it should. Most pronunciation tools play you a native speaker and ask you to copy it. The problem is, that native speaker isn't you. Their voice is a target you can't quite see yourself reaching. But hearing your own voice say a word correctly — that's different. Suddenly the target has your face on it. Suddenly it's reachable. Language learning has a thousand small miracles inside it. This is one of the bigger ones.
+      </>
+    ),
     cta: 'Hear how it works',
   },
 ];
@@ -1219,15 +1231,14 @@ export default function LuxOnboarding() {
       <section className="behind-lux">
         <div className="container">
           <div className="section-head center">
-            <div className="kicker placeholder-kicker">{content.behindLuxEyebrow}</div>
+            <div className="kicker">{content.behindLuxEyebrow}</div>
             <h2 className="section-title">{content.behindLuxTitle}</h2>
           </div>
           <div className="bl-grid">
             {BEHIND_LUX.map(card => {
               const Icon = card.icon;
               return (
-                <div className="bl-card placeholder-card" key={card.id}>
-                  <div className="bl-placeholder-banner">PLACEHOLDER</div>
+                <div className="bl-card" key={card.id}>
                   <div className="bl-icon"><Icon size={24} strokeWidth={2.2} /></div>
                   <span className="bl-eyebrow">{card.eyebrow}</span>
                   <h3>{card.title}</h3>
