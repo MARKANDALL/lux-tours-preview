@@ -49,7 +49,7 @@ const USE_CASES = [
   { id: 'school',    icon: Users,          title: 'Make small talk at the school pickup' },
   { id: 'menu',      icon: ShoppingCart,   title: 'Order food without pointing at the menu' },
   { id: 'boss',      icon: MessageSquare,  title: 'Talk through frustration with your boss' },
-  { id: 'phoneme',   icon: AudioLines,     title: 'Master /θ/ in three days' },
+  { id: 'phoneme',   icon: AudioLines,     title: 'Master /θ/, step by step' },
 ];
 
 // Behind Lux — 3-up trust/credibility section. PLACEHOLDER copy.
@@ -196,7 +196,7 @@ const DEFAULT_CONTENT = {
   navCta: 'Sign in',
   heroEyebrow: 'AI-scored. Phoneme by phoneme. Every rep.',
   heroHeadlinePre: 'Every sound you make gets',
-  heroHeadlinePost: 'better, fast.',
+  heroHeadlinePost: 'better, sound by sound.',
   heroSubtitle: 'Phoneme-level scoring on every attempt — so you improve exactly where it matters, every single session.',
   // Manifesto: word-by-word reveal with icon wake-ups (Chrome Safety pattern)
   manifestoOpen: 'Your',

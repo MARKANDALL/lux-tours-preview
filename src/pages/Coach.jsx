@@ -61,7 +61,7 @@ const COACH_PERSONALITIES = [
     name: 'Sergeant',
     icon: Target,
     tagline: 'Strict. No-nonsense. Direct.',
-    description: 'For when you want results, not validation. You\'ll improve faster.',
+    description: 'For when you want results, not validation. You\'ll improve.',
     color: 'sergeant',
     quickTip: "71% on /θ/. Not good enough. Your tongue isn't where it needs to be. Tip touching the back of your top teeth. Blow air. No voice. Do it ten times before you move on. Don't be lazy on the airflow — finish the sound.",
     deepDive: {
