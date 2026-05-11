@@ -61,7 +61,7 @@ const BEHIND_LUX = [
     title: 'Built by a teacher AND a student — who\'s still climbing',
     body: (
       <>
-        Lux was built by an award-winning ESL teacher with 13+ years in the classroom. But more than that — by someone who learned Spanish as an adult, sat for the C1 exam at La Escuela Oficial de Idiomas, and at forty-one is <em>still</em> working on his own accent (built the app partly for himself). He knows what the climb feels like from the inside. The embarrassment. The patience it actually takes. The mornings you wake up knowing the outside world is one conversation away. He also knows it's <em>so</em> worth every step. Lux is for the people who <em>want</em> to keep climbing — and who deserve a guide that's honest about what it takes and honors that journey.
+        Lux was built by an award-winning ESL teacher with 13+ years in the classroom. But more than that — by someone who learned Spanish as an adult, sat for the C1 exam at La Escuela Oficial de Idiomas, and at forty-one is <em>still</em> working on his own accent (built the app partly for himself). He knows what the climb feels like from the inside. The embarrassment. The mornings you wake up knowing the outside world is one conversation away. He also knows it's <em>so</em> worth every step. Lux is for the people who <em>want</em> to keep climbing — and who deserve a guide that honors that journey.
       </>
     ),
     cta: 'Read more',
@@ -85,7 +85,7 @@ const BEHIND_LUX = [
     title: 'Hear yourself, getting it right.',
     body: (
       <>
-        Lux can clone your voice. Then it speaks back to you — your voice, but with every sound landing exactly where it should. Most pronunciation tools play you a native speaker and ask you to copy it. The problem is, that native speaker isn't you. Their voice is a target you can't quite see yourself reaching. But hearing your own voice say a word correctly — that's different. Suddenly the target has your face on it. Suddenly it's reachable. Language learning has a thousand small miracles inside it. This is one of the bigger ones.
+        Lux can clone your voice. Then it speaks back to you — your voice, but with every sound landing exactly where it should. Most pronunciation tools play you a native speaker and ask you to copy. The problem is, that voice isn't yours. It's a target you can't quite see yourself reaching. But hearing your own voice say a word correctly — that's different. Suddenly the target has your face on it. Suddenly it's reachable. One of language learning's small miracles.
       </>
     ),
     cta: 'Hear how it works',
