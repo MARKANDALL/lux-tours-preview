@@ -19,7 +19,7 @@ Local: C:\dev\LUX_GEMINI\ONBOARDING\tours-preview
 ## Three Behind Lux cards (current live copy)
 
 **Card 1 — THE MAKER**
-Title: "Built by a teacher AND a student — who''s still climbing"
+Title: "Built by a teacher AND a student — who's still climbing"
 74 words. The Fighter voice. Italics on *still*, *so*, *want*. Embedded the C1/EOI/forty-one-still-working-on-his-accent stake.
 
 **Card 2 — THE SCIENCE**
@@ -28,7 +28,7 @@ Title: "The science behind every score."
 
 **Card 3 — THE VOICE CLONE**
 Title: "Hear yourself, getting it right."
-75 words. The Joy voice. Closes on the deliberate fragment "One of language learning''s small miracles."
+75 words. The Joy voice. Closes on the deliberate fragment "One of language learning's small miracles."
 
 ## Brand voice principles (established this session)
 
@@ -39,8 +39,8 @@ Title: "Hear yourself, getting it right."
 
 ## Queued but not done
 
-- The Manifesto rewrite — the word-by-word reveal section near the top of Landing. Currently fine but doesn''t carry the brand voice established in this session.
-- The five-mantras section — a new artifact, possibly footer, possibly its own page. Mark''s classroom mantras as a real on-site element.
+- The Manifesto rewrite — the word-by-word reveal section near the top of Landing. Currently fine but doesn't carry the brand voice established in this session.
+- The five-mantras section — a new artifact, possibly footer, possibly its own page. Mark's classroom mantras as a real on-site element.
 - Snake-oil sweep pass 2 across the 5 Tour files (Pronunciation/Coach/Voice/Conversations/Progress). Initial grep showed mostly clean — needs careful re-read before declaring done.
 - `.gitignore` for `repomix-output.xml` — accidentally committed in v1.2.
 - Desktop polish proper: prior-art sweep, observation pass against Chrome / Workspace pages, build the measurable rubric, then iterate. The big arc.
@@ -66,7 +66,7 @@ See `C:\dev\LUX_GEMINI\docs\META_NOTES.md` for the four META notes (speaking-too
 
 ## Important things not to suggest
 
-- Don''t suggest converting Tours to vanilla JS. Architecture is locked.
-- Don''t suggest mobile work unless Mark explicitly asks. Mobile polish is deferred indefinitely.
-- Don''t change brand DNA (colors, fonts, design tokens) without explicit approval.
-- Don''t add citations to marketing copy. The Tours don''t cite studies.
+- Don't suggest converting Tours to vanilla JS. Architecture is locked.
+- Don't suggest mobile work unless Mark explicitly asks. Mobile polish is deferred indefinitely.
+- Don't change brand DNA (colors, fonts, design tokens) without explicit approval.
+- Don't add citations to marketing copy. The Tours don't cite studies.
