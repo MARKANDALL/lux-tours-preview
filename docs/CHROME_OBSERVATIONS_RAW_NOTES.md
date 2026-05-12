@@ -385,3 +385,21 @@ A few patterns that I noticed while looking but that did not seem strong enough 
 Pages 2 through 6 will be appended as observation continues. The raw notes structure for each page should mirror this one: source materials, looking process, contact-sheet observations, targeted transitions, screenshot analysis, specific details, cross-reference with Mark's transcripts, patterns noticed but not promoted.
 
 When the Chrome observation pass is fully complete, this file and the polished `CHROME_OBSERVATIONS.md` should be reviewed side by side. Anything in this file that should have been in the polished doc gets promoted; the rest can be archived or deleted.
+
+---
+
+## ⚠️ Delete me
+
+This file is temporary scaffolding, not a permanent reference. It exists as a belt-and-suspenders safety net during the Chrome observation pass — a place to keep granular details, frame-by-frame logs, and asides that the polished `CHROME_OBSERVATIONS.md` doesn't carry.
+
+Once the Chrome observation pass is fully complete across all six reference pages, the workflow is:
+
+1. Read this file end to end.
+2. Read `CHROME_OBSERVATIONS.md` end to end.
+3. Promote anything from this file that should be in the polished doc — granular details that turned out to matter, patterns that should have been surfaced, observations that the rubric work will need.
+4. Confirm the polished doc is now complete and self-sufficient.
+5. **Delete this file.**
+
+Do not keep this file in the repo long-term. Its purpose is the migration of detail into the polished doc; once that migration is verified, it is dead weight. The git history preserves it if it is ever needed for forensic reasons.
+
+Last step before deletion: a final commit with a message like `docs: complete Chrome observation pass; remove raw notes scaffolding` so the deletion itself is intentional and findable in the log.
