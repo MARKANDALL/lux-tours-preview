@@ -14,14 +14,17 @@ A companion file to `CHROME_OBSERVATIONS.md`. This is the research notebook — 
 
 If a detail appears here but not in the polished doc, that is on purpose — it was either too granular to feed the rubric or sat below the threshold of "load-bearing observation." When the Chrome pass is complete, the two files should be read side by side; anything in this file that turns out to matter can be promoted upward.
 
-This file is intentionally less polished than its sibling. It is structured by the looking process, not by the rubric categories.
+This file is intentionally less polished than its sibling. It is structured by the looking process, not by the rubric categories. The polished doc treats each Chrome section as one viewport (Viewport 2 = AI section, Viewport 3 = Yours section, etc.) Within those sections, this raw-notes companion uses a finer granularity — one entry per *screenful* the user encounters while scrolling. So a polished-doc Viewport may map to several screenful entries here. That intentional mismatch is fine; each file's structure serves its own job.
 
-**Status:** Page 1 only (matching the polished doc's current state).
-**Started:** 2026-05-12 (retrospectively, from 2026-05-11 looking session).
+**Status:** Page 1 in progress (Viewport 1 hero, AI section screenfuls 2A through 2C, Yours section screenfuls 3A through 3D).
+**Started:** 2026-05-12.
+**Last updated:** 2026-05-13.
 
 ---
 
 ## Source materials used
+
+### Page 1 Viewport 1 (hero) source materials
 
 Six screen recordings and one full-page screenshot uploaded by Mark on 2026-05-11, plus two text transcripts of Mark's spoken observations and a paste of the page's full text content.
 
@@ -34,9 +37,27 @@ The six video files and their captures:
 - `20260511-2229-57` (10.0s, 742×660, 30fps). Close-up recording of the first half of the hero video (the AI search / Gemini act).
 - `20260511-2230-47` (29.4s, 736×720, 30fps). Close-up recording of the hero video slowed to roughly 0.25× speed. Full cycle. The primary instrument for transition analysis.
 
-The screenshot: `1778538694117_image.png`. Full-page screenshot of the page on initial state, showing nav, announcement bar, hero left and right columns, QR code, and the very top of the next section ("Our most powerful AI search") peeking at the bottom.
+The screenshot: `1778538694117_image.png`. Full-page screenshot of the page on initial state.
 
-## Looking process
+### Page 1 AI section and Yours section source materials
+
+Direct observation during 2026-05-12 and 2026-05-13 sessions. Materials referenced:
+
+- Conversation-based walkthroughs by Mark of each AI-section screenful (the section-title-plus-YouTube-video screenful, the dual-mockup screenful, the Gemini in Chrome subsection screenful).
+- Conversation-based walkthroughs by Mark of each Yours-section screenful (the scroll-linked landscape-to-theme transformation, the three-up carousel, the Extend Your Experience subsection).
+- Four screen recordings of the Yours carousel captured 2026-05-13 by Mark:
+  - `20260513-2339-30` (23.1s, 1914×1078, 30fps). Fullscreen recording showing the carousel cycling in the context of the whole page.
+  - `20260513-2340-22` (16.9s, 672×684, 30fps). Close-up of the cycling left demo panel through multiple categories.
+  - `20260513-2343-58` (20.9s, 658×732, 30fps). Close-up of the three rotating category titles on the right column.
+  - `20260513-2344-46` (8.6s, 470×538, 30fps). Hover-state recording of the section-level "Sign in to get started" pill.
+- Mark's text-content paste of the full Page 1 content (used in earlier sessions for voice analysis).
+- The compiled handover summary at `HANDOVER_CHROME_OBSERVATIONS_MAY_13_2026.md`.
+
+The Yours carousel videos were processed at 2 fps and viewed as contact sheets. Targeted close-up frames were extracted for the section-level CTA pill hover state.
+
+---
+
+## Looking process — Page 1 Viewport 1 (hero)
 
 Frames were extracted from each video using ffmpeg. Initial pass at 2fps from each of the six videos produced 188 frames total, viewed as contact sheets. A second pass at 4fps was run on the slowed close-up (video 6) producing 118 higher-density frames, from which targeted contact sheets of five specific transitions were assembled and viewed at higher resolution.
 
@@ -303,7 +324,7 @@ Composition top-to-bottom from the screenshot file:
 
 ---
 
-## Specific details that didn't make the polished doc
+## Specific details that didn't make the polished doc (Viewport 1)
 
 Things noticed during the looking process that were too granular for the rubric-feeding observation document. Preserved here in case they matter later.
 
@@ -315,7 +336,7 @@ Things noticed during the looking process that were too granular for the rubric-
 
 **The dog scenes contain two distinct settings.** First the two-women-petting-dog setting (with trees in background, looking like a park or backyard). Then the single-woman-walking-dog setting (leafy path going away). These are not the same scene — the dog appears similar but the environment is different. Two micro-scenes, not one.
 
-**The "elisa.g.beckett" username.** A specific full name chosen for the saved-password demo. Implies a real-feeling user account being demonstrated, not a generic "user@example.com." Increases authenticity.
+**The "elisa.g.beckett" username.** A specific full name chosen for the saved-password demo. Implies a real-feeling user account being demonstrated, not a generic "user@example.com." Increases authenticity. (See also: "Elisa Elisa" personalization in the dual mockup of Viewport 2 — same fictional user persona carried across sections.)
 
 **The "Dog sitting" thumbnail above the sign-in form.** The site being signed into has a small thumbnail image (a small icon or favicon visible at the top of the form, alongside the "Dog sitting" label). Whether this is a real Google product or a stylized mock site, the choice to label the use case ("Dog sitting" not "Generic Service") increases relatability — the viewer can imagine themselves needing this exact service.
 
@@ -337,7 +358,7 @@ Things noticed during the looking process that were too granular for the rubric-
 
 ---
 
-## Cross-reference with Mark's transcribed observations
+## Cross-reference with Mark's transcribed observations (Viewport 1)
 
 Mark's spoken observations from the first transcript ground-truthed several things I observed in the frames. Matching pairs:
 
@@ -362,11 +383,11 @@ The combination of frame analysis (mine) and experiential observation (Mark's) i
 
 ---
 
-## Patterns noticed at the time but not pulled into the polished doc
+## Patterns noticed at the time but not pulled into the polished doc (Viewport 1)
 
 A few patterns that I noticed while looking but that did not seem strong enough to feed the rubric. Preserved here for possible promotion later:
 
-**The "anonymous everyman" casting choice.** None of the people in the hero video are named, identified, or singled out. They are generic young adults using Chrome. This is a casting decision — Google could have used recognizable people, branded influencers, or named demo characters. They didn't. The video says "this is for anyone" through its casting.
+**The "anonymous everyman" casting choice.** None of the people in the hero video are named, identified, or singled out. They are generic young adults using Chrome. This is a casting decision — Google could have used recognizable people, branded influencers, or named demo characters. They didn't. The video says "this is for anyone" through its casting. (Update — Viewport 2 dual mockup contradicts this in one spot: "Hello, Elisa Elisa" personalizes one demo, naming the user. But that name carries over from the hero's "elisa.g.beckett" username, so it is a persistent fictional user across sections rather than a real named person. The "anonymous everyman" pattern holds at the level of recognizable identity; an internal fictional persona named Elisa is used as a continuity device.)
 
 **The "demonstration over claim" pattern at the video level.** No text card in the video says "Chrome helps you study!" or "Try AI search!" or "Stay safe!" The video shows people *doing* these things, with no slogans, no banners, no captions making the claim. The argument is the demonstration.
 
@@ -380,11 +401,447 @@ A few patterns that I noticed while looking but that did not seem strong enough 
 
 ---
 
-## End of Page 1 raw notes
+## Screenful 2A — AI section entry: section title and YouTube video
 
-Pages 2 through 6 will be appended as observation continues. The raw notes structure for each page should mirror this one: source materials, looking process, contact-sheet observations, targeted transitions, screenshot analysis, specific details, cross-reference with Mark's transcripts, patterns noticed but not promoted.
+The first scrolled screenful entering the AI section. Section title centered at hero-headline scale ("Our most powerful AI search built right into Chrome"). YouTube video embedded directly below it. QR code now collapsed (or expanded depending on user choice) and tracking with scroll position. Sticky island nav newly visible at top.
 
-When the Chrome observation pass is fully complete, this file and the polished `CHROME_OBSERVATIONS.md` should be reviewed side by side. Anything in this file that should have been in the polished doc gets promoted; the rest can be archived or deleted.
+### What happened mechanically
+
+The hero's two-column layout (text-left, video-right) scrolled up and out. The new section title arrived centered, not left-aligned. The user reads the change in symmetry as the section boundary. No divider line, no background color change, no decorative element marks the seam.
+
+The previously-visible page nav (with Chrome wordmark and "AI Innovations | Safety | By Google | Mobile | Extensions") slid upward and disappeared off the top edge. The light-blue announcement bar slid up with it. Simultaneously, the sticky island pill slid down from above the viewport and settled in its floating position with the seven word anchors (AI · Yours · Safe · Fast · By Google · Updates · Download). The two motions overlap; for a brief moment during the transition, neither the old top nav nor the new island nav is fully visible.
+
+The "AI" anchor in the new island pill displays in an active state — a light gray rounded pill background behind the word. This is the orientation cue. As the user moves between sections, the active highlight migrates to the new section's anchor.
+
+### Source materials referenced
+
+No new video recordings of this screenful. Description compiled from Mark's spoken walkthrough during 2026-05-12 / 2026-05-13 sessions, the page text content, and the YouTube video itself, which was discussed in detail across multiple turns.
+
+### The YouTube video — what direct observation produced
+
+The video is 62 seconds. Embedded via YouTube's native player (the video tab shows the standard YouTube player chrome when hovered, with title and channel name clickable to YouTube proper, and standard YouTube controls available). Custom poster image baked with the title "Dive deeper with / AI Mode in Chrome" against a cloud-and-Chrome composition; the poster's visual language matches the video's first frames so the click-to-play moment is continuity, not jump.
+
+Eleven scenes traced through conversation, in detail captured in the polished doc. Naming them by act:
+
+1. Title card (0–2s) — poster as still.
+2. Clouds parting, Chrome emerging (2–9s) — camera through clouds, gold-to-blue temperature shift.
+3. Chrome meets Gemini glass (9–15s) — Gemini magnifying glass overlays Chrome logo for one beat, separates, both turn to viewer.
+4. Card pull-back and shrink (15–18s) — corner-shrink to bottom-left.
+5. Search bar close-up with rainbow border (18–21s) — thin Chrome rainbow tracing card.
+6. AI Mode button reveal (21–25s) — pinprick growth, Gemini star "boop," letter-by-letter reveal of "AI Mode," rainbow outline migrates to the new pill.
+7. Pull back to Google homepage (25–28s) — full Google.com visible, search bar with AI Mode button in place.
+8. Cursor click on AI Mode (28–30s) — semi-transparent cursor arcs in from below-left, click expands search bar to double height.
+9. Coffee machine query typed (30–42s) — character-by-character typing of long context-rich prompt, rainbow gradient highlights sweeping the constraint phrases (small studio apartment, mostly drink lattes, easy to use), Calendar/Drive/Docs/Sheets/Show-More icons appearing semi-transparently as context-availability hint, cursor arcing to send button.
+10. AI Mode results page (42–52s) — two-column layout with generated text bullets on left, product cards on right, Ninja PB051 with $129.99 / 4.3 stars / 1.9K reviews, half-height ask-follow-ups input at bottom.
+11. Follow-up "How easy is this to clean?" (52–58s) — page shifts to focused view with cleaning-section bullets on left, single product image on right, rainbow highlight on "designed for low maintenance" phrase.
+12. Mobile transition (58–62s) — fade to pink, phone-shaped frame slides down from top like a drawer, Discover feed visible with "Improved Gemini audio models" headline, mobile Google homepage with shortcuts, brief continuation through other queries (Bulgarian Split Squats, tomato gardening) before returning to cloud-and-Chrome title to close.
+
+### Things noticed in conversation that didn't make the polished doc
+
+**The Ninja product is real.** The PB051 model number, the price ($129.99), and the star rating (4.3 / 1.9K) are not stylized placeholders. They correspond to an actually-purchasable Ninja product. The video could have used "Coffee Machine Brand X / $XX.XX / 4.X stars" generic placeholders and accomplished the same demonstration; instead the page commits to a real product.
+
+**The contextual icons below the search bar (Calendar, Drive, Docs, Sheets, Show More) are shown semi-transparently and never used.** The demo doesn't pull from Calendar to find out when the user moved into their studio apartment; it doesn't pull from Drive to look at a coffee-spending spreadsheet. The icons are pure hint — "this is what AI Mode could see if you let it." Functionally aspirational, visually present, not demonstrated. A real choice.
+
+**The cursor's arc trajectory.** The cursor never moves in a straight line from one button to another. It always traces a curved path, similar to how a hand moves when reaching across a desk. Frame-by-frame the path is approximately a parabolic curve. This mimics actual human motion modeling. Linear cursor movement reads as a script following a vector; arced movement reads as a person making a decision and following through.
+
+**The rainbow gradient highlight reuses the Chrome outline gradient.** Same red-yellow-green-blue progression, same saturation. Four applications observed: tracing the white card border, tracing the AI Mode pill button, highlighting the constraint phrases in the typed query, highlighting the answer-relevant phrase in the follow-up response. Same visual identity carries the same meaning across four different surface contexts. "The rainbow outline equals AI" is a piece of teachable visual grammar.
+
+**The "boop" animation on the Gemini star when AI Mode appears.** The star enlarges briefly (maybe 10–15% scale increase) and settles back to its resting size. This is a fraction of a second long. It functions the way a slight bounce does in motion design — a tiny piece of personality that signals "I am here and active." The star never boops again in the video; it boops only the moment AI Mode is birthed.
+
+**The narrator's voice is described in conversation as "young woman, fun but smart."** Not a deep authoritative announcer, not a cartoon character. A specific casting choice — Google appears to want AI Mode's narrator to feel like a slightly older sister explaining something cool, rather than a corporate spokesperson.
+
+**Closed captions are visible by default.** The video runs muted by default; the CC track is on. The viewer can read along with the narration without needing audio. This dual-channel design means the video works in libraries, on muted laptops, with screen readers, and in any environment where playing sound is inappropriate.
+
+**The video loops without YouTube's typical end-card interruptions.** No "you might also like" thumbnails, no related video suggestions, no replay button. The loop just goes back to scene 1.
+
+---
+
+## Screenful 2B — AI section middle: Dig deeper subsection, then Browsing boosted banner
+
+After the YouTube video, the page continues into the AI section's subsection-delivery format, then transitions to the section's second half (Browsing boosted with built-in AI).
+
+### The Dig deeper subsection (immediately below the video)
+
+Structure observed:
+
+- Eyebrow label: "GOOGLE SEARCH" — small, all-caps, muted gray, sitting above the subsection headline.
+- Subsection headline: "Dig deeper with AI Mode" — left-aligned, roughly 60–70% the scale of the section title.
+- Body paragraph in the right column at body-text scale.
+
+Two-column left-right layout: eyebrow-plus-headline on the left, body paragraph on the right. This is a third compositional pattern on the page (after the hero's asymmetric two-column and the section title's centered single-column).
+
+### The "Browsing boosted with built-in AI" banner
+
+The lower half of the AI section opens with a second-tier banner — same structural role as a section banner but inside an existing section, marking the transition from search-side AI (AI Mode) to browser-side AI (Gemini in Chrome).
+
+Headline: "Browsing boosted with built-in `A I`."
+
+The keeper observation here: **the AI anchor word is no longer a typographic decoration; it has graduated into a UI pill.**
+
+Pill details:
+
+- Background: blue-purple gradient.
+- Contents: an animated icon that cycles through three states.
+- Adjacent: a small pause control.
+
+The cycling icons:
+
+1. Pencil with sparkles — representing writing/composing.
+2. Stacked cards / copy icon — representing summarizing.
+3. Landscape / image icon — representing image understanding.
+
+Each icon holds for approximately 1.7 seconds before the next fades in. The icons do not slide; they morph in place. (This is M3 Expressive "shape morphing" — see `GOOGLE_DESIGN_REFERENCE.md`.)
+
+Total cycle duration approximately 5.5 seconds.
+
+### Source materials referenced
+
+No new video recordings of this screenful. Description compiled from Mark's spoken walkthrough across 2026-05-12 / 2026-05-13 sessions and the page text content.
+
+### Why this matters for the rubric
+
+The pill is a real evolution of the decorative-letter system observed in Viewport 1. In Viewport 1 the section themes were emphasized typographically (spaced letters in a slightly different style). In Viewport 2's second-tier banner the same theme word has become an animated UI button. The progression is:
+
+1. Sticky nav anchor (one-word label in the floating pill).
+2. Headline typographic emphasis (decorative letter spacing).
+3. Headline UI pill emphasis (animated, colored, icon-bearing).
+
+The page is teaching its grammar across viewports. By the time the user reaches Viewport 3's Yours banner, the pill mechanic is familiar (same structural role, different content). By the time they catch a glimpse of the Safe section, the pattern is established enough that just seeing the green pill is enough to know the section's theme. The page is building its own visual language and applying it consistently.
+
+### The associated subsection content (below the banner)
+
+After the Browsing boosted banner, the screenful continues with the dual-mockup composition, which is detailed in Screenful 2C.
+
+---
+
+## Screenful 2C — AI section close: dual mockup, Gemini in Chrome subsection, CTA bar
+
+The last screenful of the AI section. Three components stacked vertically: a dual-mockup visual showing Gemini in Chrome on desktop and phone, a subsection delivery (eyebrow-less, headline-plus-body), and a CTA bar before the section transition.
+
+### The dual mockup
+
+Side-by-side composition of a desktop browser and a phone, both showing the same content (a vanilla cake recipe with Gemini chat). Both fully static — no animation. The only motion anywhere in this screenful is the icon rotation inside the Browsing boosted banner pill (which is at the top of the previous screenful but still visible above-the-fold during this screenful's scroll position).
+
+Desktop mockup specifics:
+
+- Browser tab labeled "Bakery creations."
+- "Hello, Elisa Elisa" appears as a personalization line — same fictional Elisa persona used in the hero video's saved-password tooltip.
+- Recipe content (a vanilla cake recipe) visible in the main browser area.
+- Gemini chat panel docked to the right of the browser window.
+- Gemini input placeholder text reads "Type @ to ask about a tab" — this is real Gemini syntax for tab-referencing.
+- The "Pro" badge on the input field signals this is the Pro tier experience.
+- A "Sharing 'Bakery creations'" indicator at the bottom transparently surfaces that Gemini sees the current tab. Real product UI, not a stylized abstraction.
+
+Phone mockup specifics:
+
+- Same content scaled to a phone form factor.
+- Desaturated and slightly darker than the desktop. Hierarchy through saturation: desktop primary, phone secondary.
+- Three Gemini suggestion chips visible at the bottom: "Summarize page," "Create FAQ about this topic," "What can Gemini do in Chrome?"
+- The chips pop forward visually from the desaturated phone, holding interest.
+
+### Source materials referenced
+
+No new video recordings of this screenful. Description compiled from Mark's spoken walkthrough and the page text content.
+
+### Granular details
+
+**Saturation as hierarchy.** Desaturation is being used as a visual prioritization mechanism. The phone is not less important than the desktop in the cross-device story — they show the same content — but in the visual composition the desktop is the lead. Saturation does the work that a different size or position would do otherwise.
+
+**The fictional Elisa persona crosses sections.** Hero video: "elisa.g.beckett" saved password. AI section dual mockup: "Hello, Elisa Elisa." The same fictional user is being used across multiple sections as a continuity device. This is a quiet but real touch — the marketing material has a recurring fictional protagonist.
+
+**Real Gemini affordances.** Every Gemini-specific UI element shown in the mockup is a real product affordance: the @-tab-reference syntax, the Pro badge, the Sharing indicator, the suggestion chips. The marketing material renders the product as it actually exists, not an idealized version.
+
+### The Gemini in Chrome subsection (below the dual mockup)
+
+Structure observed:
+
+- No eyebrow.
+- Subsection headline: "Gemini in Chrome: Your AI browsing assistant." Subsection scale, smaller than the section banner.
+- Body paragraph in right column.
+- Asterisked disclaimer below body.
+- Chrome-blue link: "Explore Gemini in Chrome."
+
+Body text: "Gemini in Chrome helps you easily understand content on the web and get things done using the context of your open tabs and browsing history. Plus, with auto browse, Gemini in Chrome can do your tedious tasks for you* – from shopping and reservations, to research and more."
+
+Disclaimer text: "*Auto browse available only to Google AI Ultra and Pro subscribers in the U.S."
+
+Voice patterns observed in this body:
+
+- "Helps you easily understand" — verb-led, user-action-framed.
+- "Get things done" — verb-led, user-action-framed.
+- "Do your tedious tasks for you" — addresses a real friction (tedious tasks) and proposes relief.
+- The em-dash construction with examples ("from shopping and reservations, to research and more") gives concreteness without listing exhaustively.
+
+### The mid-section CTA bar
+
+A wide light-blue pill bar spanning most of the page width. Same pale-blue treatment as the top-of-page announcement bar. The page is reusing component-level styles.
+
+Left side text: "Gemini in Chrome can do tasks for you with auto browse. Available to Google AI Pro and Ultra subscribers in the U.S."
+
+Right side: "Sign up now ↗" link.
+
+The pill has rounded corners, no shadow. The same component the announcement bar is using.
+
+### Section transition out
+
+Substantial pure-white space follows the CTA bar before the Yours section's banner. Visually larger than the gap between subsections within the AI section. White space encodes the structural level — bigger white space = bigger boundary.
+
+### Patterns noticed but not promoted
+
+**The "third-party brand visible on Chrome's marketing page" choice.** Real YouTube branding visible during the embed (YouTube watermark, native YouTube player). Real Ninja product shown in the AI Mode demo. This is unusual — most marketing pages avoid showing other companies' branding to keep focus. Chrome's page does the opposite: it lets the real ecosystem show through. The implicit message is "Chrome is where you actually browse, including these places." Not load-bearing for the rubric but worth noting.
+
+**The page reuses one design idiom across very different contexts.** The pale-blue rounded pill bar appears (a) at the top of the page as the announcement bar, (b) mid-section as a feature CTA, and is also (c) visually consistent with the smaller "Sign up now ↗" and "Get Chrome for your phone" pill styling. The page treats "pill on pale blue" as a single component with multiple instances.
+
+---
+
+## Screenful 3A — Yours section opening: banner and scroll-linked transformation
+
+The first scrolled screenful of the Yours section. Contains the section banner ("Make it `y o u r s` and take it with you") and then enters the scroll-linked landscape-to-theme transformation that is the section's signature motion piece.
+
+### The build-up white space
+
+Before the Yours banner appears, a substantially-larger-than-normal gap of pure white sits between the bottom of the AI section's CTA bar and the top of the Yours headline. Visually larger than any other section-to-section transition observed on Page 1.
+
+This is deliberate. Mark identified the function during observation: it builds scroll momentum before the section's signature move. The user starts scrolling through emptiness, gathers speed and expectation, and then the scroll-linked transformation arrives with the user already in motion. It is the cinematic equivalent of cutting to black before a big reveal.
+
+This use of white space is different in role from the white space at the AI-to-Yours section boundary (which is delimiting). Here the white space is *pre-loading* an experience — setting expectations.
+
+### The Yours banner pill
+
+Headline: "Make it `y o u r s` and take it with you."
+
+The "yours" anchor word sits inside a colored pill. Same mechanic as the AI pill from Viewport 2's lower half, with section-specific styling:
+
+- Background: red/coral.
+- Icon: a paintbrush.
+- Animation: none — the icon is static (unlike the AI pill, which cycles through three icons).
+
+This is the second instance of the section-banner-pill system. The pattern is now confirmed as systematic (not just a one-off in the AI section). It is the page's mechanism for naming the section's theme as a UI element rather than a typographic decoration.
+
+### The scroll-linked landscape-to-theme transformation
+
+Five stages, all pinned to scroll position. The user controls the timing entirely.
+
+**Stage 1.** Below the banner, a horizontal landscape photograph appears. Delicate Arch in Utah — blue sky, red rock formation. At this initial moment the image looks like a regular content image, no animation.
+
+**Stage 2.** As the user continues to scroll, the landscape image grows. It does not pan; it scales up. Progressively fills more of the viewport. The banner headline scrolls off the top normally.
+
+**Stage 3.** At approximately the midpoint of the scroll range, a Chrome browser frame fades in *over* the now-full-viewport landscape. Tabs at the top, address bar, Google search box appearing in the middle. The landscape becomes the browser's background theme. The image was not just a photograph; it is being revealed as your Chrome theme.
+
+**Stage 4.** The landscape Chrome dissolves into a different themed Chrome — dark navy/purple cosmic background with a tiny astronaut floating among stars. Same browser frame, different mood. The theme switch is demonstrated through transformation rather than described.
+
+**Stage 5.** Once the transformation completes, the section unpins. Normal scroll resumes. The carousel below begins.
+
+### Source materials referenced
+
+No new video recordings of this screenful in this session. Description compiled from Mark's spoken walkthrough during 2026-05-12 / 2026-05-13 and his confirmation that the mechanic is scroll-linked (reversible — scrolling up reverses the transformation).
+
+### The scroll mechanic, named precisely
+
+The Yours section uses what is conventionally called "scroll-linked" (or "scroll-driven") animation. The section is pinned in place — likely `position: sticky` with a tall scroll range, or an IntersectionObserver-based effect, or possibly the newer scroll-driven animations CSS proposal. The animation inside the pinned section progresses according to how far through the scroll range the user has moved.
+
+Properties of this mechanic:
+
+- User keeps full scroll control. They can scrub forward and backward, pause anywhere, reverse by scrolling up.
+- Section unpins once the user exits the scroll range. They are not trapped.
+- No "click to skip" needed — scroll *is* the navigation.
+
+This is distinct from scroll-jacking, where the page hijacks scroll input to advance through fixed states. Scroll-linked is responsive to the user; scroll-jacked overrides the user.
+
+### Patterns noticed but not promoted
+
+**The page introduces motion categories in escalating complexity.** Viewport 1: locked motion (hero video). Viewport 2: locked motion (YouTube video) plus static composition (dual mockup) plus embedded micro-animation (banner pill icon cycle). Viewport 3: scroll-linked motion as a new category. The user is learning the page's motion vocabulary in steps; by the time scroll-linked motion fires, three other types have been introduced and the page has earned the right to try something more demanding.
+
+**The astronaut detail.** Frame inspection during the carousel later confirms the dark theme contains a tiny astronaut figure floating in space among stars. This is a Google-specific brand touch — the astronaut appears in other Google product themes too. Not just a generic dark theme; a specifically-Googley dark theme.
+
+---
+
+## Screenful 3B — Yours section middle: the three-up carousel
+
+The center of the Yours section. Auto-cycling three-category carousel with a section-level CTA pill below. This is the screenful where the carousel was directly observed this session via four screen recordings.
+
+### What the videos showed
+
+Four recordings:
+
+- `20260513-2339-30` (23.1s, 1914×1078). Fullscreen recording of the carousel in context. Frames extracted at 2 fps (46 frames). Shows multiple full rotations through the three categories. Confirms the carousel position on the page (below the scroll-linked transformation), the section CTA pill below it, the surrounding page chrome (purple browser theme, sticky island nav, QR code corner). One artifact: the recording briefly captures Mark's Windows alt-tab task switcher between approximately frames 26 and 30 (which shows other open windows: DICTATEHOTKEY, CHROME_OBSERVATIONS_RAW_NOTES.md, his Outlook, his Calendar, etc.) This is an artifact of Mark window-switching during recording, not Chrome page content.
+
+- `20260513-2340-22` (16.9s, 672×684). Close-up of the cycling left panel. Frames extracted at 2 fps (34 frames). Captures full cycles through all three panel types: Customize (theme picker with cycling background), Browse (yellow background with composed phone mockup), Autofill (mint-green background with address form filling animation).
+
+- `20260513-2343-58` (20.9s, 658×732). Close-up of the right column. Frames extracted at 2 fps (42 frames). Captures the three rotating category titles with their expanded/collapsed states and the blue progress line.
+
+- `20260513-2344-46` (8.6s, 470×538). Hover-state recording specifically of the "Sign in to get started" section CTA pill. Frames extracted at 2 fps (17 frames). Shows cursor entering/leaving the pill, the slight darken on hover, the small arrow-flick.
+
+### Carousel layout (confirmed by frames)
+
+Asymmetric two-column. Left column: a large rounded-square tile that swaps content as the active category changes. Right column: three category titles stacked vertically (Customize your Chrome, Browse across devices, Save time with autofill), with a section-level "Sign in to get started ↗" pill button below all three.
+
+### The blue progress line (corrected from previous summary)
+
+The line is a thin vertical bar that sits to the left of the active category's title. It is *not* static during the active period. It **grows smoothly and continuously from top to bottom** over the dwell time. When the line completes its bottom-to-top traversal, the rotation snaps to the next category instantly. The previous category collapses (description fades out, line disappears), the new category expands (description fades in, line appears empty at top), and the line immediately begins filling for the new category.
+
+This was a correction from the previous handover's description, which had been less specific about the line's growth motion. Direct video observation confirms continuous smooth growth, instant snap, no overlap between categories.
+
+### The three panels' content (corrected from previous summary)
+
+**Customize panel — not just "Chrome new-tab cycling through themes."** What is actually shown is the Chrome theme-picker UI itself: a 3×3 grid of theme thumbnails inside a card. As the demo animates, blue selection rings cycle through different thumbnails (each tile briefly highlighted as if being clicked by an internal animated cursor). Simultaneously, the background *behind the picker* changes to show the theme that has just been selected. Backgrounds seen in rotation: the rock arch landscape (same Delicate Arch from the scroll-linked transformation above), a dark cosmic background with the astronaut, a yellow background, a white/cream background. The picker stays put; the wallpaper cycles.
+
+This is a more elegant idea than "demo cycles colors." It is "demo enacts the theme-selection workflow." The user is being shown what theme selection looks like, mechanized.
+
+**Browse panel — not just "static phone with map."** The previous handover summary undersold this. The actual content: a yellow background with a rounded-rectangle phone outline. Inside the phone, the top row shows browser tabs (visible as small tab indicators — approximately four tabs). Below them, a composed view including multiple types of browsing content at once:
+
+- A Google Maps panel showing New York City with red pins.
+- A Google search results pane titled "Museums list in New York City" with bulleted items (Metropolitan, MoMA, Frick Collection, 9/11 Memorial).
+- A YouTube card with a thumbnail showing a NYC skyline at sunset.
+
+The composition does real work without motion. It shows the *kind* of cross-device browsing the Browse Across Devices feature actually facilitates — research with multiple tabs open across sources, ported to the phone — rather than abstracting "sync" into a generic graphic.
+
+The panel itself is fully static during the entire dwell. Confirmed by Mark: "The browse phone is static. It does nothing."
+
+**Autofill panel — typing-then-fill animation.** Solid mint-green background. An address form appears with empty fields. An animated cursor (part of the panel's animation, not the user's mouse) moves into the frame. The cursor selects suggestion items from a dropdown: "Elisa Work / 1600 Amphitheatre Parkway / Elisa Home / 19510 Jamboree Road / Manage Addresses..." The form then auto-populates: "Elisa Beckett / Mountain View, CA 94043 / (650) 253-0000." The typing-then-fill pattern is the same one used in the YouTube AI Mode video's coffee-machine query — motion vocabulary reused across sections.
+
+Confirmed by Mark: the cursor is part of the animation. The Customize panel similarly has internal cursor-driven selection animations. Browse is fully static.
+
+### The section-level CTA pill — corrected from previous summary
+
+The "Sign in to get started ↗" pill is *not* tied to the autofill panel as the previous handover suggested. The hover-state recording (Video 4) and the right-column close-up (Video 3) confirm: the pill sits persistently at the bottom of the right column under all three category titles, visible regardless of which category is currently active.
+
+Pill specifics:
+
+- Light blue background, rounded pill shape.
+- Text: "Sign in to get started ↗"
+- Hover behavior: cursor enters → pill background darkens slightly, the small arrow icon flicks to point up-and-to-the-right.
+- Click behavior: presumed to be a sign-in CTA; not tested in recordings.
+
+The pill is functionally separate from the carousel's rotation. Its role is section-level — applying to the entire Yours experience (theme + sync + autofill) rather than any one sub-feature.
+
+Confirmed by Mark: "It's stagnant. It does nothing. It just sits there. The only thing that happens is if you hover on it, it will darken it and the little arrow will do its animation."
+
+### Interaction behavior (confirmed by Mark)
+
+- Auto-rotation: continuous, cycles indefinitely until interaction.
+- Click on a collapsed category title: stops auto-rotation, jumps to that category, holds. User takes the wheel.
+- Hover on a category title: does *not* pause rotation. Carousel keeps moving.
+- Click on the left demo panel: does nothing. The panel is a display, not a CTA.
+- Hover on a category-specific CTA link (e.g., "Explore themes ↗"): the small arrow flicks up-and-to-the-right, link darkens slightly. Same minimalist hover pattern as the section CTA pill.
+
+### Per-category CTAs observed
+
+- Customize your Chrome → "Explore themes ↗" (Chrome-blue link, hover-animated arrow).
+- Browse across devices → no per-category CTA.
+- Save time with autofill → no per-category CTA. (The previous handover attributed "Sign in to get started" to autofill; this is incorrect — that pill is section-level.)
+
+The asymmetry — one category has a per-category CTA, two don't — is a discipline point. The page didn't force a fake CTA into all three for symmetry. Customize has an actionable destination (the themes gallery). Browse and Autofill are both passive features that activate when you sign in, so they don't need separate destinations — the section-level "Sign in to get started" handles both.
+
+### The panel background color system
+
+- Customize: cycling through the theme backgrounds (the demo is the colors).
+- Browse: solid gold/yellow.
+- Autofill: solid mint/pale green.
+
+All warm colors — distinct from the AI section's cooler blues and purples. Color hierarchy operates at three levels: section banner pill (red-coral) → carousel panel backgrounds (warm family) → demo content within panels (theme palettes and form colors).
+
+### Granular details that didn't make the polished doc
+
+**The theme-picker grid arrangement.** The 3×3 grid inside the Customize panel shows nine theme thumbnails: a black/space theme (top-left), a red theme, a green plant/leaf theme, a light/cream theme, a yellow theme, a blue gradient theme, the brown/landscape Delicate Arch theme, a coast/beach theme, an orange/sunset theme. Not all of these are necessarily real shipping themes — some may be representative thumbnails — but the grid layout itself is real Chrome theme-picker UI structure.
+
+**The astronaut continues to appear.** First seen in the scroll-linked transformation (Stage 4). Reappears in the Customize panel during the dark-theme cycling moment. Persistent Google brand element across the entire Yours section.
+
+**The Browse phone shows what appears to be an Android Chrome interface, not iOS.** No iOS-style status bar (no notch indicators, no iOS time format). Subtle but consistent.
+
+**The Autofill cursor moves smoothly and pauses on selection items.** When it hovers a suggestion, it holds briefly before clicking. This pause is the cursor's "consideration" — the kind of micro-delay a real user would naturally have. Not just an automated cursor; a *deliberate-feeling* automated cursor.
+
+**The carousel cycle timing feels approximately 5–7 seconds per category.** Not timed precisely in this observation pass. Worth measuring in the rubric phase if it matters.
+
+### Patterns noticed but not promoted
+
+**Pause-on-click instead of pause-on-hover is unusual but well-considered.** Most carousels use pause-on-hover as a default — the polite UX assumption is "if the user's mouse is on something, they want to read it." But pause-on-hover causes carousels to get accidentally "stuck" when users casually mouse across the area. Pause-on-click requires deliberate intent. The cost is that users who naturally read at their own pace cannot temporarily slow the carousel by hovering; the benefit is that the carousel actually rotates as designed for most users.
+
+**The "demo is the feature" pattern.** Customize panel demonstrates the feature by showing the feature being used. Autofill panel does the same. Browse does it differently — by showing a finished cross-device state. The page is operating multiple "demo strategies" within one carousel.
+
+**No accessibility pause control on the carousel.** Unlike the hero video (which has a "Pause video" button) and the YouTube embed (which has the full YouTube controls), the carousel has no visible pause button. The implicit pause is "click any category to override." This is functionally a pause but is not labeled as one. A user with vestibular sensitivity who wanted the rotation to stop entirely would have to click and click again to switch categories. Worth noting; may not matter for the rubric.
+
+---
+
+## Screenful 3C — Yours section close: Extend Your Experience subsection
+
+The closing screenful of the Yours section. A standalone subsection with its own composition, presenting the Chrome Web Store / extensions.
+
+### The structural finding
+
+Extend Your Experience is a standalone subsection below the carousel, *not* a fourth tab in the carousel rotation. The carousel is firmly three-up (Customize / Browse / Autofill). Extensions is broken out as its own block with a different visual treatment.
+
+This is a real composition decision. The page put three closely-related "your Chrome data" features in the auto-cycling carousel (themes, sync, autofill — all about personalizing the existing Chrome experience). Then it broke Extensions out separately, because Extensions has more behavioral consequence — you actively add new things to your browser, modifying Chrome rather than personalizing what you already have. The structural separation matches the user-commitment level.
+
+### Layout
+
+Asymmetric two-column. Left column:
+
+- Headline: "Extend your experience" — subsection scale, smaller than section banners.
+- Body paragraph: "From shopping and entertainment to productivity, find extensions to improve your experience in the Chrome Web Store."
+- Link: "Explore extensions ↗" — Chrome-blue, hover-animated.
+
+Right column: a Chrome browser window showing the Google homepage with the dark space/cosmic theme — the *same theme* observed in the Customize panel's cycling background and in Stage 4 of the scroll-linked transformation. Visual continuity within the section.
+
+### The visual continuity reading
+
+The same Chrome window — same theme, same compositional treatment — recurs three times across the Yours section:
+
+1. As Stage 4 of the scroll-linked transformation (cosmic theme replaces landscape theme).
+2. As one of the cycling backgrounds in the Customize panel (cosmic theme appears among the rotation).
+3. As the right-column display of the Extend Your Experience subsection.
+
+The recurrence is not coincidence. The story being told across the entire Yours section is one user's progressively-customized Chrome. Themes were applied (scroll-linked transformation). Themes are being selected (Customize panel). Extensions are being added (Extend subsection). Same fictional user, same Chrome window, three stages of personalization.
+
+### Scroll-linked icon arrival — second use of the new motion category
+
+As the user scrolls into the Extend subsection, five colored circular icons swoop in one at a time, locked to scroll position. Each represents an extension category:
+
+- Shopping
+- Entertainment
+- Tools
+- Art & Design
+- Accessibility
+
+(Names taken from the surrounding text content; exact icon-to-name mapping not visually inspected during this pass.)
+
+The icons settle into positions around the browser window in the negative space adjacent to it. Not inside the window — the window is preserved as a clean composition — but floating around it like satellites.
+
+### Source materials referenced
+
+No new video recordings of this screenful in this session. Description compiled from Mark's spoken walkthrough during 2026-05-13.
+
+### The pattern observation
+
+Scroll-linked motion is used *twice* in the Yours section, at very different scales:
+
+- The opening landscape-to-theme transformation: full-viewport pinning, multi-stage cinematic, the section's signature move.
+- The Extend Your Experience icon arrival: peripheral, small-scale, scroll-paced reveal of secondary content.
+
+This rules out the hypothesis that scroll-linked motion is a one-time gimmick. The page uses it as a recurring pattern available at multiple scales. The rubric should treat it as a reusable mechanic, not a special-event-only effect.
+
+### Outstanding observations to fill later
+
+- Exact icon-to-category mapping (which icon is Shopping, which is Accessibility, etc.).
+- Whether the icons do anything after arrival — hover effects? click-to-filter? or purely decorative?
+
+These can be filled in when Mark next observes the section. Both are lightweight gaps, not blockers.
+
+---
+
+## Screenful 3D — Yours section transition out
+
+Below the Extend Your Experience subsection, substantial pure-white space precedes the next section's banner ("Stay `s a f e` while you browse" with a green pill). Same major-section-boundary treatment observed at the AI-to-Yours transition. This is the standard section-to-section spacing pattern, not the larger pre-loading white space observed before the scroll-linked transformation at the section opening.
+
+The green Safe-section banner pill confirms the per-section color system at three data points (AI = blue-purple, Yours = red-coral, Safe = green). The system can now be expected — Fast, By Google, and Updates will each have their own color and section-specific icon.
+
+---
+
+## End of Page 1 raw notes (current scope)
+
+Pages 2 through 6 will be appended as observation continues. The raw notes structure for each subsequent page should mirror this one: source materials, looking process where applicable, contact-sheet observations where applicable, targeted observations, screenful-by-screenful entries, granular details, cross-references, and patterns noticed but not promoted.
+
+When the Chrome observation pass is fully complete, this file and the polished `CHROME_OBSERVATIONS.md` should be read side by side. Anything in this file that should have been in the polished doc gets promoted; the rest can be archived or deleted.
 
 ---
 
