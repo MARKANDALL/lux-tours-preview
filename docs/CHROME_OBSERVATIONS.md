@@ -12,9 +12,9 @@ A structured observation pass on the six Google Chrome reference pages identifie
 
 This is not a scoring document. Nothing here ranks Chrome as good or bad, applicable or inapplicable to Lux. Implications and applicability decisions belong in the rubric work that follows and in the design discussions after. The goal here is to see clearly.
 
-**Status:** In progress.
+**Status:** Page 1 complete. Pages 2 through 6 pending.
 **Started:** 2026-05-11.
-**Last updated:** 2026-05-13.
+**Last updated:** 2026-05-14.
 
 ## The six reference pages
 
@@ -421,39 +421,343 @@ The section's energy is high-then-medium-then-low. The opening transformation is
 
 ### Viewport 4: Safe section
 
-*[Pending.]*
+The full Safe section, occupying roughly two scrolled screens. Opens with the centered banner ("Stay `s a f e` while you browse") containing the section's first pill of the light-blue family. Body of the section is a 2×2 grid of four flippable cards, each presenting one Chrome safety sub-feature: Password Manager (top-left), Safety Check (top-right), Enhanced Safe Browsing (bottom-left), Privacy Guide (bottom-right). This viewport introduces the page's first reusable card-flip component, which is later reused in the By Google section.
 
-"Stay `s a f e` while you browse." Per the section banner pattern established in Viewports 2 and 3, expect a green pill with a safety-related icon. Per a brief preview observed while scrolling, the section uses scroll-linked motion similar to the Yours section. Four sub-features following the same template: Password Manager, Enhanced Safe Browsing, Safety Check, Privacy Guide.
+#### Section entry and banner
+
+The Yours-to-Safe handoff uses the same major-section-boundary white space established earlier on the page. Substantial pure-white gap precedes the centered banner.
+
+The Safe banner reads "Stay `safe` while you browse." Layout matches the Yours title: three text components ("Stay" before pill, the pill containing only the section theme, "while you browse" trailing on the next line below the pill). Multi-line break is deliberate — the pill anchors the visual center.
+
+Banner pill: light blue/pale-blue background, green Chrome-shield icon (the same Safe Browsing G-shield used in the hero video's Act 4 — a fourth instance of cross-section iconography reuse), Chrome-blue "safe" text. The pill is fully static — no entrance animation, no cycling icons.
+
+The pill is the third instance of the section-banner-pill system and confirms a finding that emerged across the AI, Yours, and Safe banners: **each section has its own colored pill background and section-specific icon.** The system is not "uniform pill, varying icon" — it is "uniform pill *shape*, varying color and icon together." Six confirmed data points by the end of Page 1 (see cross-page synthesis at the foot of this page).
+
+#### The 2×2 card grid
+
+Four cards arranged in a two-by-two grid, each card occupying roughly half the width of the section. Each card has a deliberately distinct visual treatment, and the four treatments alternate diagonally:
+
+- **Password Manager** (top-left): solid deep blue background, white text, visual-heavy front face including a UI demonstration.
+- **Safety Check** (top-right): light lavender/pale-blue background, dark text, headline-only front face.
+- **Enhanced Safe Browsing** (bottom-left): **white background** with a thin Chrome-blue top-edge accent line, dark text, headline-only front face. The only white card on the page so far.
+- **Privacy Guide** (bottom-right): solid deep blue background, white text, visual-heavy front face featuring a large G-shield logo.
+
+The visual-heavy cards (PM and PG) sit on one diagonal; the text-only cards (SC and ESB) sit on the other. This is deliberate rhythm — the grid never asks the user's eye to read two text-heavy cards or two visual-heavy cards side by side. Sweep down-right diagonally and the visual weight alternates.
+
+#### The card flip mechanic
+
+Every card in the grid is flippable. Each one has a front face and a back face; clicking the front (or its bottom-right blue "+" button) flips to the back, and clicking the back (anywhere except the back's body link) flips back to the front. The mechanic is implemented as a **vertical content swap with consistent directional motion**, not as a 3D card-flip rotation.
+
+Forward flip (front → back): every element on the card moves up. Front-face content rises and dissolves out the top. Back-face content rises up from below and fades in as it arrives at its resting position. Directionality is uniform across all elements of the card, but timing is slightly staggered per element (headline arrives one beat before body, body one beat before link, etc.) so the swap reads as motion-with-personality rather than a single rigid block sliding.
+
+Return flip (back → front): every element on the card moves down. Back content sinks and dissolves. Front content descends from above and fades in. Same stagger applied in reverse.
+
+The "+" button on the front becomes an "×" close-arrow on the back, in the same blue-circle component in the same bottom-right position. The icon change communicates "this is now the way out" without text.
+
+#### Hover behavior on the cards
+
+The whole card responds to hover, but the specific affordances that bulge are different per card:
+
+- **Password Manager**: the "+" button in the bottom-right bulges slightly. The embedded "Use Saved Password?" tooltip element on the front face also bulges — a second hover target on the same card, signaling that the demo itself is interactive in concept.
+- **Safety Check**: only the "+" button bulges. The card is otherwise non-interactive.
+- **Enhanced Safe Browsing**: the "+" button bulges, and additionally the card's outline strengthens slightly. The white background is the reason — a stronger border can register visibly only on the white card. The other three colored cards rely on the colored background itself to communicate boundary.
+- **Privacy Guide**: the "+" button bulges, and the large G-shield visual on the front face also bulges.
+
+Hover discipline is consistent across the page: subtle scale-up bulge on focus targets, small arrow flick on linked text, no breathing animations on dormant elements.
+
+#### Front-face content per card
+
+- **Password Manager**: eyebrow "PASSWORD MANAGER" + headline "Use strong passwords on every site." + UI demonstration showing an "elisa.g.beckett" username field, a masked password field with eye-toggle icon, and the actual Chrome "Use Saved Password?" tooltip with the rainbow Google key icon and dots. The "elisa.g.beckett" persona is the same one from the hero video's Act 4 saved-password demo, and the same Elisa Elisa from the AI section's dual mockup ("Hello, Elisa Elisa"). Third appearance of the persona on Page 1.
+
+- **Safety Check**: eyebrow "SAFETY CHECK" + headline "Check your safety level in real time with just one click." No demo on front face; just text.
+
+- **Enhanced Safe Browsing**: eyebrow "ENHANCED SAFE BROWSING" + headline "Browse with the confidence that you're staying safer online." No demo on front face. Thin blue line along the top edge.
+
+- **Privacy Guide**: eyebrow "PRIVACY GUIDE" + headline "Keep your privacy under your control with easy-to-use settings." + a large G-shield logo (the Google shield mark in lighter blue against the dark blue card background) occupying the lower half of the card.
+
+#### Back-face content per card
+
+Every back face follows a common pattern: a small real-product-UI demonstration at top, descriptive body text below the demonstration, a "Learn more about X" link in Chrome blue, and the "×" close button in the bottom-right. The product UI shown on the back is always real Chrome shipping interface, not stylized — the page's fourth major instance of the "real UI, faithfully rendered" pattern.
+
+- **Password Manager back**: the actual Chrome "Save password?" browser prompt with the saved-credentials list, body text explaining Chrome Password Manager, "Learn more about Password Manager ↗" link.
+
+- **Safety Check back**: the actual Chrome Safety Check panel UI (header bar with the Safety Check title and items list including Passwords, Updates, Browsing, etc.), body text explaining "Chrome Safety Check confirms the overall security and privacy of your browsing experience, including your saved passwords, extensions, and settings. If something needs attention, Chrome will help you fix it.", "Learn more about Safety in Chrome ↗" link.
+
+- **Enhanced Safe Browsing back**: the actual Chrome red malware warning page ("The site ahead contains malware" warning with the standard Chrome warning chrome), body text "Chrome's Safe Browsing warns you about malware or phishing attacks. Turn on Enhanced Safe Browsing for even more safety protections.", "Learn more about Safe Browsing ↗" link.
+
+- **Privacy Guide back**: the actual Chrome "Take the Privacy Guide" opt-in card with "Get started" and "No, thanks" buttons, body text explaining the Privacy Guide tour, "Learn more about intuitive safety controls ↗" link.
+
+The "Learn more about X" link on each back face leads to a separate destination page (Mark confirmed this by clicking through Password Manager during observation — destination was a "Simpler, safer passwords / Google Password Manager securely saves your passwords and helps you sign in faster" landing page). Each link is destination-named, matching the page-wide pattern (no generic "Learn more").
+
+#### Voice patterns specific to this section
+
+The Safe section's voice is *quieter* than the AI and Yours sections. Body text on each back face is roughly two or three sentences. No exclamation points. No words like "powerful," "amazing," "incredible." The voice is reassuring rather than enthusiastic, which matches the section's content — safety is communicated through stability, not through energy.
+
+The verbs lead pattern from earlier viewports holds: "Use strong passwords," "Check your safety level," "Browse with the confidence," "Keep your privacy under your control." Every headline is something the user does or experiences, never a property of the product.
+
+#### Pacing observed within this viewport
+
+Safe is the *calmest* section on the page so far in terms of motion. After the dense motion of AI (perpetual cycling pill, locked YouTube video, dual mockup, banner pill cycling) and Yours (scroll-linked transformation, auto-cycling carousel, scroll-linked icon arrival), Safe steps down to: a static banner pill, four cards with no autoplay animation, and motion only on user interaction (the flip). The page is using motion sparingly here, deliberately — safety is a topic where stability and calm are part of the argument.
+
+---
 
 ### Viewport 5: Fast section
 
-*[Pending.]*
+The full Fast section, occupying roughly two scrolled screens. Opens with the centered banner ("The `f a s t` way to do things online") containing a green pill with a one-time entrance animation — the first instance on the page of *viewport-triggered locked animation*, a motion category distinct from anything in Viewports 1 through 4. The section then stacks three different motion mechanics in a single pinned scroll range: a viewport-triggered locked sequence of UI events, a scroll-linked shrinking transform that creates a "box-within-box" optical effect, and a horizontal manual-only carousel of three sub-feature cards. This is the most complex motion choreography on Page 1.
 
-"The `f a s t` way to do things online." Prioritize performance, Stay on top of tabs, Optimized for your device.
+#### Section entry and banner
+
+Standard major-section-boundary white-space precedes the centered banner.
+
+The Fast banner reads "The `fast` way to do things online." Same multi-line title pattern as Yours and Safe — three text components with the pill containing only the section theme.
+
+Banner pill: medium-light green/mint background, darker green/teal "fast" text, green speedometer icon. Unlike the AI pill (perpetual cycling) and the Yours and Safe pills (static), the Fast pill has a **one-time entrance animation** that fires when the user scrolls the title into view and does not loop. Reload is required to play it again.
+
+The entrance animation:
+
+1. Pill appears.
+2. Letters of "fast" cascade in, overshoot their final positions slightly, then bounce back to rest.
+3. Simultaneously, the speedometer icon draws itself in arc-style — the bottom curve of the dial appears first, then progressively the full dial materializes, with a subtle bounce as it settles.
+4. Pill is now in its final state for the rest of the user's time on the page.
+
+A small pause control sits next to the pill, matching the pause component used on the hero video, the YouTube embed, and the Browsing-boosted AI banner pill.
+
+This is the page's first *viewport-triggered locked* animation. It is distinct from:
+
+- *Perpetual locked* motion (hero video, YouTube embed, AI banner pill cycling) — runs continuously without user input.
+- *Scroll-linked* motion (Yours landscape transformation, Extend icon arrival/dissolve) — user's scroll is the playback control, fully scrubbable.
+- *Static* (Yours pill, Safe pill, dual mockup) — no motion at all.
+- *Viewport-triggered locked* (Fast pill) — fires once on entry, then static; needs page reload to replay.
+
+The page now operates four motion categories on a single page.
+
+#### The central demonstration on viewport entry
+
+Below the banner, a large Chrome browser window occupies most of the viewport width. Inside the browser, a viewport-triggered locked animation sequence runs once when the user scrolls into the section — independent of further scrolling input, on a fixed timeline.
+
+The sequence (frame analysis): a custom-themed Chrome new-tab page appears (the Chrome wallpaper is a colorful botanical artwork — stylized blue, green, red, orange, and pink plants on a pink-coral background, with a large white "Google" wordmark and the search bar in the center). Many tab thumbnails open across the top of the browser in rapid succession, suggesting "many tabs at once." A Google Slides presentation ("docs.google.com/presentation/") then appears as the foreground content, showing a green slide titled "Our big idea." The actual Chrome "Energy Saver is on" notification popup ("Background activity and some visual effects, like smooth scrolling, may be limited" with "Turn Off Now" / "OK" buttons) overlays the right side of the browser. Memory Saver indicators surface. The whole sequence is roughly the length of the section's other motion elements and runs once per page-load.
+
+#### The "box-within-box" scroll-linked transform
+
+As the user continues scrolling, a scroll-linked transform begins. This is the most distinctive single visual effect on Page 1.
+
+A new outer card crystallizes *around* the existing browser content. The outer card carries the first sub-feature's identity — eyebrow + headline ("Prioritize performance") + body text ("Chrome is built for performance. Optimize your experience with features like Energy Saver and Memory Saver.") + a "Learn more about Memory and Energy Saver ↗" link. While this outer card is forming, the inner browser content begins shrinking — but at a *faster rate* than the outer card's boundary contracts. The result is two nested boundaries visibly converging at different rates: the outer card forming around the content, the original browser compressing inward.
+
+By the end of the scroll range, the original full-size browser has compressed into the demo *inside* the new Prioritize performance card. The transformation is the inverse of the Yours section's landscape-to-theme transformation (where one image grew and became a theme); here, a large central demo shrinks and becomes one card in a carousel.
+
+The mechanic is technically a layered scroll-driven transform with different rates assigned per element. Visually, it reads as the page's most cinematic single moment — a moment that could be a Lux Tours signature if the equivalent technique were applied to a feature reveal.
+
+#### The horizontal manual carousel
+
+Once the shrink completes, the user is presented with the section's three sub-feature cards in a horizontal arrangement. One card is centered/active, and the next card peeks roughly 25% of its width from the right edge of the viewport. There are no visible arrow buttons and no pagination dots — the peek itself is the entire navigation affordance.
+
+The carousel is **manual-only**. Unlike the Yours three-up carousel (which auto-rotated with a continuous blue progress line and gave the user pause-by-click), this carousel does not auto-advance. The user must click to move forward or back. Mark confirmed this behavior directly.
+
+Side-by-side comparison of the two carousels on Page 1:
+
+- *Yours carousel*: vertical category list on right + single cycling demo panel on left; auto-rotates with progress indicator; pause-by-click; hover does not pause.
+- *Fast carousel*: horizontal cards left-to-right; one centered with next card peeking; manual click navigation only; no auto-rotation.
+
+Different mechanics for different content. The page is willing to operate two distinct carousel patterns within itself rather than forcing one to fit both contexts.
+
+#### Content of the three Fast cards
+
+- **Prioritize performance** (white card, leftmost): "Chrome is built for performance. Optimize your experience with features like Energy Saver and Memory Saver." Demo is the now-compressed central browser from the section entry: docs.google.com/presentation URL, "Our big idea" green slide, "Energy Saver is on" notification popup with "Turn Off Now" / "OK" buttons. Link: "Learn more about Memory and Energy Saver ↗"
+
+- **Stay on top of tabs** (yellow card, middle): headline "Stay on top of tabs." Demo shows the actual Chrome tab-grouping feature with colored tab chips labeled "Personal" (red), "Trip to Arches" (orange), "Work" (teal), "New Tab," followed by a browser address bar. The "Trip to Arches" label is a small narrative callback to the Delicate Arch landscape from the Yours section's scroll-linked transformation — fifth example of cross-section narrative continuity.
+
+- **Optimize for your device** (green card, rightmost): cross-device demo with a browser window and a phone showing a QR code (consistent visual language with the persistent corner QR code).
+
+#### Real product UI throughout
+
+Every interface element shown in this section is the real Chrome shipping interface, not stylized: the Energy Saver notification, the Memory Saver feature, the tab-grouping feature with colored chips, the docs.google.com/presentation URL bar, the QR code aesthetic. Fourth major instance of the "real UI, faithfully rendered" pattern on Page 1.
+
+#### Pacing observed within this viewport
+
+Fast is the *peak motion density* on Page 1. Three motion categories operating simultaneously in a single pinned scroll range. The section then resolves into the horizontal carousel, which is intentionally calm (no auto-rotation, no animation on the cards themselves) to give the user a place to rest after the dense entry animation. The dramatic peak is the box-within-box shrink; everything after that decelerates.
+
+---
 
 ### Viewport 6: By Google section
 
-*[Pending.]*
+The full By Google section, occupying roughly two scrolled screens. Opens with the centered banner ("The browser `b u i l t` by Google") containing a pale-cream pill with a second one-time entrance animation (the page's second instance of viewport-triggered locked motion). The body of the section is split: the top viewport delivers Google Search via a "color-card-with-enclosed-demo" pattern (echoing several earlier subsections), and the bottom viewport delivers Google Pay and Google Lens via two flippable cards reusing the component first introduced in the Safe section.
 
-"The browser `b u i l t` by Google." Google Search built in, Google Pay, Google Lens.
+#### Section entry and banner
+
+Standard major-section-boundary white-space precedes the centered banner.
+
+The By Google banner reads "The browser `built` by Google." Same multi-line title format as Yours, Safe, and Fast.
+
+Banner pill: pale yellow/cream background, rust-orange crossed hammer-and-wrench icon, rust-orange "built" text.
+
+The pill animation is the page's *second* viewport-triggered locked entrance and uses a different choreography from Fast's:
+
+1. Pill appears empty.
+2. Letters of "built" cascade in one-by-one (the "centipede flow" — each letter arriving in sequence with a small stagger).
+3. A single tool (wrench-shape, rendered diagonal) rotates into the icon slot.
+4. The hammer joins and crosses over the wrench, the two tools cross-fading into their final crossed-X arrangement.
+5. Settled.
+
+The page is using different one-time-entrance choreographies for different sections. Fast had letters-bounce-overshoot plus a speedometer drawing itself in arc-style. By Google has letters-cascade plus a tool-cross-fade. The fact that the page bothered to differentiate these animations rather than reusing one is itself evidence of intentional craft.
+
+#### Top viewport: Google Search subsection
+
+A wide yellow card spans most of the section width. The card contains:
+
+- Eyebrow "GOOGLE SEARCH" (small all-caps).
+- Subsection headline on the left column: "The search bar you love, built right in."
+- Body text on the right column: "Access a world of knowledge at your fingertips. Check the weather, solve math equations, and get instant search results, all contained inside your browser's address bar."
+- An animated Chrome browser embedded in the card showing the address bar typing through three queries on a loop:
+  1. "good morning in french" → autocomplete dropdown shows the actual Google Translate result inline ("Bonjour (French)") with the Translate icon, plus follow-up suggestions for pronunciation and translation.
+  2. A currency conversion query ("300 USD to Euro" or similar) → conversion result inline.
+  3. A weather query ("Weather in Paris") → weather widget inline.
+- A "Pause animation" pill button in the bottom-right of the yellow card, matching the pause component used elsewhere on the page.
+
+The demonstration's argument: Chrome's omnibox is an answer machine. Translation, currency conversion, weather, math — they resolve inline in the address bar without a separate page load. The animation never narrates this; it demonstrates it. Real Chrome behavior, faithfully rendered.
+
+This is the page's *color-card-with-enclosed-demo* pattern, which has appeared earlier in subtler forms (the AI section's dual mockup is a similar but static variant). Here the pattern is fully expressed: a colored card frames the subsection content and contains a real, looping animation of the feature in use.
+
+#### Bottom viewport: Google Pay and Google Lens cards
+
+Two cards side by side, both flippable. The component is reused from the Safe section's 2×2 grid, scaled to two cards instead of four. Same blue "+" button bottom-right that becomes an "×" close-arrow on the back face. Same up-then-down vertical content swap with staggered timing. Same pattern of "real UI demo on front, descriptive body text and Learn-more link on back."
+
+**Google Pay** (left, saturated yellow background): the front face shows a Google Wallet card list with three saved payment methods rendered as "•••• 1234," "•••• 4567," "•••• 7890" plus a "Manage payment methods..." link and the "G Pay" wordmark. The back face shows body text — "Google Pay makes it easy to pay online. When you securely store your payment info in your Google Account, you can stop typing your credit card and check out faster." — and a "Learn more about Google Pay ↗" link.
+
+**Google Lens** (right, pale cream background): the front face shows a high-resolution photograph of a pink Red Ginger flower with Google Lens viewfinder corner brackets overlaid on the subject and a small floating result card identifying "Red Ginger / Plant" with similar plant thumbnails. The back face shows body text and a Lens learn-more link.
+
+The Lens demo continues a cross-section thread: in the hero video's Act 3, Lens identifies a Euphorbia Ingens cactus; here in By Google, Lens identifies a Red Ginger flower. Same feature, different plant, consistent theme — Lens demonstrations on Page 1 are always about plant identification. Sixth example of cross-section narrative continuity.
+
+The two-card scale demonstrates that the flippable-card component is *truly reusable*. Safe used four cards in a 2×2; By Google uses two in a single row; the underlying component is the same. The page operates a small design system at the component level.
+
+#### Voice patterns specific to this section
+
+Body text on the cards is short — two to three sentences. Same calm voice established in Safe. "Built by Google" is the section's argument; the text doesn't push the user with claims about why that matters. The demonstrations carry the argument.
+
+#### Pacing observed within this viewport
+
+By Google sits between the high-density Fast section and the simple Updates section. Energy steps down from Fast's box-within-box drama but stays above Updates' static-card simplicity. The animated Google Search demo provides one motion attractor at the top of the section; the two flippable cards below are interaction-on-demand rather than autoplay. The user reads this section at their own pace.
+
+---
 
 ### Viewport 7: Updates section
 
-*[Pending.]*
+The Updates section, occupying roughly one scrolled screen. Opens with the centered banner ("Discover the latest `u p d a t e s` from Chrome") containing a light-blue pill with the page's third viewport-triggered entrance animation. Body is two non-flippable cards side by side. This is structurally the simplest of the six themed sections — by design.
 
-"Discover the latest `u p d a t e s` from Chrome." Automatic updates, New from Chrome.
+#### Section entry and banner
+
+Standard section-boundary white-space precedes the centered banner.
+
+The Updates banner reads "Discover the latest `updates` from Chrome." Same multi-line title pattern as the four preceding sections.
+
+Banner pill: light blue/lavender background, blue circular-arrow (refresh) icon, Chrome-blue "updates" text.
+
+The pill animation is the page's *third* viewport-triggered locked entrance, with yet another distinct choreography:
+
+1. Pill appears with "updates" text faint.
+2. "updates" letters resolve to their final position with subtle stagger.
+3. The refresh-circle icon draws itself in arc-style — partial arc first, then the full circular arrow materializes.
+4. Settled.
+
+The page is now confirmed to have three distinct viewport-triggered entrance animations across Fast, By Google, and Updates. The Fast animation drew a speedometer with letters that bounced past their final position. By Google cascaded letters and cross-faded two tools. Updates draws a refresh arrow with subtler letter motion. Three pills, three different choreographies, no reuse.
+
+#### The two cards
+
+Below the banner, two cards side by side. Both are static — neither flips, neither auto-animates. The component is a simpler variant of the flippable cards from Safe and By Google: same structural layout (eyebrow + headline + body text + link + optional visual), but without the blue "+" button in the bottom-right and without the flip mechanic.
+
+**Automatic updates** (left, pale blue-gray background): eyebrow "UPDATES" + headline "Automatic updates" + body text ("There's a new Chrome release every four weeks, making it easy to have the newest features and a faster, safer web browser.") + "Learn about automatic updates" link (Chrome-blue plain text). Below the link, a visual demonstration showing a Chrome browser toolbar fragment with the favorites star, a small blue update indicator dot, and the actual Chrome "New Chrome available" update notification pill with kebab menu — real Chrome shipping UI. The background of the demo fragment shows a colorful botanical Chrome theme — the *same* botanical theme that served as the central browser's wallpaper in the Fast section. Sixth instance of cross-section visual continuity.
+
+**New from Chrome** (right, pale cream background): eyebrow "LATEST" + headline "New from Chrome" + body text ("Chrome regularly updates with tools and features that make it faster and easier to use.") + "Learn what's new on Chrome" link. Demo shows a large full-color Chrome logo positioned in the bottom-right of the card. On section entry, the Chrome logo *rolls left-to-right* across the card, once, to its final position. This is the only motion in the section beyond the banner pill entrance.
+
+#### Why this section is intentionally simple
+
+After five sections of dense and varied motion (perpetual cycling, scroll-linked transformations, flippable cards, viewport-triggered animations, box-within-box scroll transforms, auto-rotating carousels), Updates steps down. Two cards. No flip. Plain text links. One small entrance animation per side.
+
+The simplicity reads as discipline: by Page 1's end, the user has been given a great deal of visual information. The page is willing to release the user with calm rather than push another spectacle. This is the rhetorical close before the FAQ wrap-up.
+
+#### Voice patterns specific to this section
+
+Sparse. The body text is exactly the length needed and not one sentence longer. The argument is "Chrome stays current, both automatically and visibly" — and the section delivers it in two cards plus two links.
+
+---
 
 ### Viewport 8: FAQ
 
-*[Pending.]*
+A simple accordion-format section with six expandable questions, sitting between the Updates section and the final CTA. Roughly one half-viewport in height when collapsed.
 
-Six frequently asked questions in an expandable accordion.
+#### Layout
+
+A centered "Frequently asked questions" title at section-banner scale. Below it, six rows separated by thin horizontal dividers. Each row contains a Chrome-blue question on the left and a "+" plus button on the right. Click the row to expand its answer; click again to collapse.
+
+#### The six questions
+
+1. How do I make Chrome my default web browser?
+2. How can I customize Chrome?
+3. What are Chrome's safety settings?
+4. What is Chrome's password manager?
+5. How do I add a browser extension to Chrome?
+6. How do I update Chrome?
+
+#### The pattern: FAQ as argument-restatement
+
+The questions track the page's section order. Question 1 covers initial install — the general entry. Question 2 reframes the Yours section as a user question. Question 3 reframes the Safe section. Question 4 reframes the Password Manager sub-feature inside Safe. Question 5 reframes the Extend Your Experience subsection inside Yours. Question 6 reframes the Updates section.
+
+The FAQ is not generic Q&A. It is the page's own argument restated in the user's voice — the "how do I" inverse of what each section just demonstrated. The user who read the page asks the same questions in the order the page is structured to answer them. The FAQ confirms the page's claim that it has covered what matters.
+
+#### Voice patterns
+
+Each question is short and natural-language — the way a real user types into a search bar, not the way a marketing department writes copy. "How do I make Chrome my default web browser?" rather than "Setting Chrome as your default browser." The user's voice all the way through.
+
+---
 
 ### Viewport 9: Final CTA and footer
 
-*[Pending.]*
+The closing of Page 1, occupying roughly one full scrolled viewport. A blue final-CTA card, then social-follow icons, then a five-column footer, then a Google bottom strip.
 
-"Take your browser with you" with the Download Chrome button (second occurrence of the primary CTA on the page), followed by the Chrome Family / Enterprise / Education / Dev and Partners / Support footer columns, social follow icons, and the Google-standard bottom strip (Privacy and Terms, About Google, Google Products, Help, language selector).
+#### The final CTA
+
+A wide Chrome-blue rectangular card spans most of the section width. Inside:
+
+- Headline "Take your browser with you" in white at section-headline scale.
+- Body text "Download Chrome on your mobile device or tablet and sign into your..." (trails into the second line of the card).
+- The **second occurrence of the primary Download Chrome button** on the page. The first occurrence was in the hero (Viewport 1). The button is structurally identical: pill-shaped, white background with the Chrome-blue download arrow and "Download Chrome" text. Repetition is the entire point — the page opened with the offer and closes with the same offer, framed by everything in between.
+- The persistent QR code (the same "Get Chrome for your phone" QR that has tracked with the user as a corner element since Viewport 1) appears integrated into the final CTA card itself. The corner element and the in-card element are visually identical components — same QR pattern, same Chrome-logo inset, same "Get Chrome for your phone" caption. The page reuses the component rather than creating a separate one.
+
+#### The sticky island nav persists to the end
+
+In the final CTA frame, the sticky island nav with the seven anchors (AI · Yours · Safe · Fast · By Google · Updates · Download) is still visible. It does not fade out at the bottom of the page. Throughout Page 1, the island anchor is the only consistently-present navigation; even at the very end the user has one-click access to any section or to the Download CTA. The Download anchor in the island pill and the in-card Download Chrome button do the same job — multiple paths to the same conversion target.
+
+#### "Follow us" row
+
+Below the final CTA, a small row with the label "Follow us" on the left and five social-network icons in a horizontal line: YouTube, X, Facebook, LinkedIn, TikTok. Icons only, no labels. Minimalist treatment consistent with the rest of the page.
+
+#### The five-column footer
+
+A horizontal-rule divider precedes the footer block. Five columns, each with a bolded category header at the top:
+
+- **Chrome Family**: Other Platforms, Chromebooks, Chromecast, Chrome Web Store.
+- **Enterprise**: Download Chrome Browser, Chrome Browser for Enterprise, Chrome Devices, ChromeOS, Google Cloud, Google Workspace.
+- **Education**: Google for Education, Devices for schools.
+- **Dev and Partners**: Chromium, ChromeOS, Chrome Web Store, Chrome Experiments, Chrome Beta, Chrome Dev, Chrome Canary.
+- **Support**: Chrome Help, What's New, Update Chrome, Chrome Tips, Google Chrome Blog.
+
+Roughly 30 links total. External-link arrow icons (↗) on links that leave the chrome.com domain. The footer is structurally dense in deliberate contrast to the page above it (which used aggressive whitespace and minimal navigation throughout). The page makes room for everything Google organizationally needs to surface, but only at the very end, after the marketing flow has resolved.
+
+#### The Google bottom strip
+
+A second horizontal-rule divider precedes the bottom strip. Standard Google footer:
+
+- Google logo on the left.
+- Privacy and Terms link.
+- About Google link.
+- Google Products link.
+- Help link (with question-mark icon).
+- Language switcher on the right ("English – United States" with a dropdown chevron).
+
+#### Pacing observed within this viewport
+
+The final viewport is a deliberate de-escalation. Bright CTA-blue card → social icons → dense functional footer → Google standard strip. The page is wrapping itself in increasingly utilitarian layers as it closes. The user is being released from the experience rather than pushed for a final conversion.
+
+---
 
 ### Page 1 — Preliminary implications (appendix)
 
@@ -480,6 +784,28 @@ The section-level CTA pill pattern (Sign in to get started, persistent below a m
 The white space as section delimiter is something Landing could adopt easily. No new graphic assets needed; the page just needs to allow itself larger gaps between major sections than between subsections within them.
 
 The catalog of absences should be its own column in the rubric — for every Tours page, what is NOT there that does not need to be.
+
+The flippable-card component observed in the Safe section and reused in By Google is directly applicable to Lux. Each Tour could have a small grid of feature cards on its detail page, each card with a marketing front (eyebrow + headline + supporting visual) and a "show me how" back (real Lux UI screenshot + body text + Learn-more link). The vertical content-swap mechanic with staggered timing is achievable in pure CSS/JS and would let Tour pages cover more sub-features without forcing the user to scroll through them all unfolded. The cards' content-swap directionality (forward flip = everything moves up; return flip = everything moves down) is worth keeping intact — it is more legible than a 3D card-flip.
+
+The four-pill section-banner color system at six confirmed data points (AI blue-purple gradient, Yours pink/coral, Safe light blue + green icon, Fast green + speedometer, By Google pale cream + rust tools, Updates light blue + refresh circle) demonstrates that one component reused with section-specific colors and icons is more visually disciplined than custom-designing each section's identity from scratch. Lux Tours should establish one banner-pill component and apply per-Tour color and icon variants, not per-Tour design treatments.
+
+The five distinct pill motion personalities (perpetual cycling on AI, static on Yours and Safe, three distinct one-time entrance animations on Fast, By Google, and Updates) demonstrate that motion can be *distributed unevenly* across a page. Not every section needs to move. Lux Tours could have one or two sections with rich motion (the hero loop, perhaps Pronunciation), while other sections stay calm. The contrast is part of what makes the rich motion feel earned.
+
+The viewport-triggered locked animation category (Fast pill, By Google pill, Updates pill — and the larger Fast section's UI sequence) is a useful motion type to add to Lux Tours' vocabulary. Fires once per page load, then static. Better than perpetual motion in many contexts because it gives the user a discrete "thing to notice" without continuing to demand attention forever.
+
+The box-within-box scroll-linked transform from the Fast section is the single most cinematic effect on Page 1 and is a candidate for a signature Lux Tours moment. The mechanic — a large central demo shrinks while a new outer card crystallizes around it at a different rate — could be adapted to a feature like the pronunciation scoring breakdown, where the full-size phoneme analysis shrinks into a card position while the surrounding explanation forms around it.
+
+The horizontal manual carousel in Fast (no auto-rotation, peek-ahead as the only navigation affordance) is a different and sometimes better solution than the auto-rotating Yours carousel. Auto-rotation works when the content is small and the dwell time matters less; manual works when each item deserves the user's full attention. Lux Tours could use both patterns in different contexts.
+
+The "real product UI, not stylized" pattern is enforced across every section of Page 1 (hero video tooltips, AI Mode interface, dual mockup, Yours theme picker, Safe back-of-card panels, By Google Pay/Lens demos, Updates notification). This is the strongest single discipline of the page and the one most directly applicable to Lux. Tours should show the real Lux app interface, in its real positions and proportions, not idealized abstractions of features.
+
+The cross-section narrative continuity at six identified threads (Elisa persona across hero/AI/Safe; the Delicate Arch landscape across Yours/Fast; the cosmic Chrome theme across Yours scroll-linked stage/Yours Customize panel/Yours Extend subsection; Lens-identifies-plant from hero to By Google; the botanical Chrome theme across Fast and Updates; the persistent QR code component from hero through final CTA) demonstrates a small but persistent universe-building discipline. Lux Tours could thread one or two similar continuity elements across its pages — a recurring user persona, a recurring scenario, a recurring visual theme — to make the Tours feel like one coherent product rather than five isolated landing pages.
+
+The FAQ-as-argument-restatement pattern (where the six questions track the six section themes in order) is a clean way to close the Tours' landing page. Six Lux Tours equal six FAQs, each restating one Tour's value as a "how do I" user question.
+
+The repeat-the-hero-CTA-at-the-bottom pattern (the second Download Chrome button identical to the first, framing the page) is a clear template for the Tours' Landing page bottom CTA.
+
+The persistent sticky island nav that does not fade out at the bottom of the page is a small but powerful detail. Even at the end of a long page, the user has one-click access back to any section or to the conversion target. Worth replicating on Lux Tours.
 
 ---
 
@@ -517,9 +843,52 @@ Structurally the closest reference to what the Tours need to do. Prioritize this
 
 ## Cross-page patterns
 
-*[Pending — to be synthesized after all six pages are observed.]*
+*[Cross-page synthesis pending — to be written after Pages 2 through 6 are observed.]*
 
 This section will name the techniques that appear consistently across multiple Chrome pages, distinguishing them from techniques that are page-specific. Cross-page patterns are the strongest candidates for rubric criteria, since their repetition across an established design system is evidence that Google considers them load-bearing.
+
+In the meantime, a within-Page-1 synthesis of patterns that recur across viewports on the home page alone is captured below. These are systems the page operates internally and that may or may not extend to Pages 2 through 6.
+
+### Within-Page-1 patterns (provisional, pending cross-page verification)
+
+**The section-banner-pill system.** Every themed section on Page 1 carries a centered title in which the section's theme word sits inside a colored pill. Each pill has a distinct color and a section-specific icon. Confirmed at six data points:
+
+- AI (Browsing boosted with built-in AI banner): blue-purple gradient pill, cycling icon (pencil/copy/image and others)
+- Yours: pink/coral pill, paintbrush icon (static)
+- Safe: light blue pill, green Chrome-shield icon (static)
+- Fast: green pill, speedometer icon (one-time entrance animation)
+- By Google: pale cream pill, rust crossed hammer+wrench icon (one-time entrance animation)
+- Updates: light blue pill, blue refresh-arrow icon (one-time entrance animation)
+
+The pill is always positioned within a multi-line title where the theme word anchors the visual center. The system is one component reused with per-section color and icon variants — not six bespoke designs.
+
+**The five pill motion personalities.** Different sections distribute motion differently across their pills:
+
+- Perpetual cycling (AI banner pill — multiple icons fading through over a 5-6 second loop forever)
+- Static (Yours pill, Safe pill)
+- Three distinct one-time entrance animations (Fast: letters bounce-overshoot + speedometer draws in arc-style; By Google: letters cascade one-by-one + tool cross-fade; Updates: subtler letter motion + refresh-circle draws in)
+
+The three one-time entrances use *different* choreographies for each section — no reuse. This is craft signaling.
+
+**The flippable card component.** Introduced in Safe (four cards in 2×2 grid), reused in By Google (two cards in one row). Same blue "+" button bottom-right becomes "×" close-arrow on the back. Same vertical content swap with consistent directional motion (forward flip = everything up; return flip = everything down) and per-element staggered timing. Front face shows marketing pitch + supporting visual. Back face shows real product UI + descriptive body + "Learn more about X" link.
+
+**The scroll-linked motion category.** Appears twice on the page, at very different scales — large (Yours opening landscape-to-theme transformation, full-viewport pinned) and small (Yours Extend Your Experience icon arrival, peripheral). The mechanic also extends to exit choreography (the Extend icons grow-and-dissolve when the user continues scrolling past them).
+
+**The viewport-triggered locked motion category.** A motion type distinct from both perpetual locked motion and scroll-linked motion. Fires once on viewport entry, then static. Present in the Fast pill, By Google pill, Updates pill, and the larger Fast section's central UI sequence.
+
+**The "real product UI, not stylized" pattern.** Every interface shown across every section is the real Chrome shipping interface, faithfully rendered. The hero video's Use Saved Password tooltip, the AI Mode interface, the Gemini chat panel, the Google Lens result cards, the Yours theme picker, the Safe backs (Save password? prompt, Safety Check panel, malware warning page, Privacy Guide opt-in card), the By Google Wallet and Lens demos, the Updates "New Chrome available" notification. The page's marketing material doubles as the product's screenshots in motion.
+
+**The verb-led, user-action-framed voice.** Every section headline is something the user does or experiences. Never "Chrome features X." Always "Make it yours," "Stay safe," "Customize your Chrome," "Use strong passwords," "Check your safety level," "Prioritize performance," "Stay on top of tabs," "Pay for things as quick as you click."
+
+**The destination-named "Learn more" link.** Every Learn-more link names its destination ("Learn more about Password Manager," "Learn more about Google Pay," "Learn more about Memory and Energy Saver"). Never a generic "Learn more."
+
+**The white-space-as-section-delimiter system.** Major section boundaries get substantially larger gaps than subsection boundaries within sections. The amount of white space encodes the level of structural change.
+
+**The cross-section narrative continuity.** Six identified threads stitch the page into one universe: the Elisa Beckett persona (hero saved-password tooltip, AI dual mockup "Hello Elisa Elisa," Safe Password Manager card); the Delicate Arch landscape (Yours scroll-linked transformation Stage 1, Yours Customize panel theme rotation, Fast carousel "Trip to Arches" tab group label); the cosmic dark Chrome theme (Yours Stage 4, Yours Customize panel, Yours Extend subsection right column); the Lens-identifies-plant scenario (hero Act 3 Euphorbia, By Google Lens Red Ginger); the botanical Chrome theme (Fast central browser, Updates Automatic-updates demo); the persistent QR code component (hero corner, throughout-page corner, final CTA in-card).
+
+**The catalog of absences.** Things the page consistently does *not* have: no cookie banner, no newsletter popup, no chat-with-us bubble, no exit-intent modal, no countdown timer, no testimonials carousel, no press logo wall, no star-rating widget, no competitor comparison, no autoplay sound, no floating CTA, no scroll progress indicator, no hamburger menu, no language switcher in the top nav (only at the bottom), no "Sign in" in the top nav, no breathing animations on dormant elements. Confidence expressed through absence of decoration.
+
+**The aggressive component reuse at the system level.** The same pale-blue pill background appears on the announcement bar, the AI section CTA bar, the Sign in to get started CTA, the Explore extensions CTA, the Safe pill, the Updates pill (close variants). The same QR code component reappears at three positions. The same Download Chrome button appears in the hero and in the final CTA. The page operates a small design system with high reuse rather than designing each instance from scratch.
 
 ---
 
@@ -543,5 +912,32 @@ Observations on Page 1 Viewport 3 (the Yours section) were drawn from:
 - Frame extraction at 2 fps from each recording and contact-sheet review.
 - Mark's narrated walkthrough of the section structure, panel mechanics, and animation behaviors.
 - The compiled handover summary at `HANDOVER_CHROME_OBSERVATIONS_MAY_13_2026.md`, corrected at four points by direct video observation (the Customize panel content, the Browse panel composition, the placement of the Sign in to get started pill as section-level rather than autofill-specific, and the smooth growth of the blue progress line).
+
+Observations on Page 1 Viewport 4 (the Safe section) were drawn from:
+- Five screen recordings captured 2026-05-14: an overview recording of the section in context (21 seconds), and individual close-up recordings of each of the four flippable cards (Password Manager 33s, Safety Check 42s, Enhanced Safe Browsing 27s, Privacy Guide 32s).
+- Frame extraction at 2 fps and contact-sheet review of all five recordings.
+- Mark's narrated walkthrough confirming the flip mechanic's directionality (forward flip = everything moves up; return flip = everything moves down) with per-element staggered timing.
+- Cross-reference observation that the Extend Your Experience icons from Viewport 3 have an *exit* animation (grow-and-dissolve) on scroll-out — visible at the top of the Safe overview recording and not previously captured.
+- The page's text content.
+
+Observations on Page 1 Viewport 5 (the Fast section) were drawn from:
+- Four screen recordings captured 2026-05-14: a fullscreen section-entry recording (39 seconds), a close-up of the pill entrance animation (5 seconds), a main scroll-linked-animation recording (47 seconds), and a horizontal carousel recording (37 seconds).
+- Frame extraction (2 fps for overviews, 6 fps for the pill animation) and contact-sheet review.
+- Mark's narrated walkthrough including direct confirmation that the horizontal carousel is manual-only (does not auto-rotate) and that the section's central animation combines viewport-triggered locked motion with scroll-linked shrinking.
+
+Observations on Page 1 Viewport 6 (the By Google section) were drawn from:
+- Four screen recordings captured 2026-05-14 (with one duplicate ignored via md5 verification): a section-entry recording (47 seconds), a Google Search demo recording (39 seconds), a pill animation close-up (4 seconds at 8 fps), and a Lens-and-Pay cards recording (32 seconds).
+- Frame extraction and contact-sheet review.
+- Mark's narrated walkthrough including the pill animation's letter-cascade-plus-tool-cross-fade choreography and the confirmation that the section's lower-half cards reuse the Safe-section flippable component.
+
+Observations on Page 1 Viewport 7 (the Updates section) were drawn from:
+- Two screen recordings captured 2026-05-14: a section overview (13 seconds) and a pill animation close-up (3 seconds at 8 fps).
+- Frame extraction and contact-sheet review.
+- Mark's narrated confirmation that the cards in this section are non-flippable and that the only motion beyond the pill entrance is the Chrome logo rolling across the right card on section entry.
+
+Observations on Page 1 Viewport 8 (the FAQ) and Viewport 9 (the final CTA and footer) were drawn from:
+- One screen recording capturing the FAQ section in context (13 seconds, 2 fps frame extraction).
+- One full screenshot of the final CTA and the complete footer.
+- Mark's narrated walkthrough confirming the simplicity of these closing viewports.
 
 All visual claims in this document are grounded in those materials. No claims are made from memory or training data about Chrome's design.
